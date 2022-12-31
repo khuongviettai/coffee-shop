@@ -5,14 +5,16 @@ import Navbar from "./layouts/Navbar/Navbar";
 import BackgroundHome from "./layouts/Background/BackgroundHome/BackgroundHome";
 import BannerProduct from "./layouts/Background/BannerProduct/BannerProduct";
 import Inspiration from "./layouts/Background/Inspiration/Inspiration";
+import Collection from "./components/Collection/Collection";
 
 const App = () => {
   return (
     <>
       <Navbar />
-      <BackgroundHome />
+      {/* <BackgroundHome />
       <BannerProduct />
-      <Inspiration />
+      <Inspiration /> */}
+      <Collection />
     </>
   );
 };

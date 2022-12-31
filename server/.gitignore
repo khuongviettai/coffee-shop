@@ -10,7 +10,8 @@
 /build
 
 # misc
-
+../.env
+./.env
 ../.DS_Store
 .DS_Store
 .env
