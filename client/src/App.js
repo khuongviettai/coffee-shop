@@ -6,6 +6,8 @@ import BackgroundHome from "./layouts/Background/BackgroundHome/BackgroundHome";
 import BannerProduct from "./layouts/Background/BannerProduct/BannerProduct";
 import Inspiration from "./layouts/Background/Inspiration/Inspiration";
 import Collection from "./components/Collection/Collection";
+import Signin from "./components/Signin/Signin";
+import Signup from "./components/Signin/Signup";
 
 const App = () => {
   return (
@@ -14,7 +16,9 @@ const App = () => {
       {/* <BackgroundHome />
       <BannerProduct />
       <Inspiration /> */}
-      <Collection />
+      {/* <Collection /> */}
+      <Signin />
+      {/* <Signup /> */}
     </>
   );
 };

@@ -70,6 +70,7 @@ const Navbar = () => {
               name=""
               className="navbar__search-input"
               placeholder="Tìm kiếm ..."
+              style={{ backgroundColor: "rgba(255,255,255, 0.01)" }}
             />
           </div>
         </div>
