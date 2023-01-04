@@ -13,6 +13,13 @@ const userSchema = new mongoose.Schema(
       require: true,
       min: 5,
     },
+    fullName: {
+      type: String,
+      require: true,
+    },
+    birthDate: {
+      type: Date,
+    },
     isAdmin: {
       type: Boolean,
       default: false,

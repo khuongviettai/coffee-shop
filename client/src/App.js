@@ -6,19 +6,25 @@ import BackgroundHome from "./layouts/Background/BackgroundHome/BackgroundHome";
 import BannerProduct from "./layouts/Background/BannerProduct/BannerProduct";
 import Inspiration from "./layouts/Background/Inspiration/Inspiration";
 import Collection from "./components/Collection/Collection";
-import Signin from "./components/Signin/Signin";
-import Signup from "./components/Signin/Signup";
+import Item from "./components/Item/Item";
+import Login from "./pages/Login/Login";
+import Register from "./pages/Register/Register";
+import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
+import SingleProduct from "./components/SingleProduct/SingleProduct";
 
 const App = () => {
   return (
     <>
-      <Navbar />
-      {/* <BackgroundHome />
+      {/* <Navbar />
+      <BackgroundHome />
       <BannerProduct />
       <Inspiration /> */}
       {/* <Collection /> */}
-      <Signin />
-      {/* <Signup /> */}
+      {/* <Item /> */}
+      {/* <Login /> */}
+      {/* <Register /> */}
+      {/* <ForgotPassword /> */}
+      <SingleProduct />
     </>
   );
 };

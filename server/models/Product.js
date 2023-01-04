@@ -20,8 +20,12 @@ const reviewSchema = mongoose.Schema({
   },
 });
 
-const teaSchema = new mongoose.Schema({
+const productSchema = new mongoose.Schema({
   title: {
+    type: String,
+    require: true,
+  },
+  category: {
     type: String,
     require: true,
   },
@@ -53,4 +57,4 @@ const teaSchema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model("Tea", teaSchema);
+module.exports = mongoose.model("Product", productSchema);
