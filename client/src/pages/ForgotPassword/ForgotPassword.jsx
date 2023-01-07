@@ -3,7 +3,7 @@ import "./ForgotPassword.scss";
 import icon from "./img/vietnam-flag-icon.png";
 
 const ForgotPassword = () => {
-  const [otp, setOtp] = useState("");
+  // const [otp, setOtp] = useState("");
   const [minutes, setMinutes] = useState(1);
   const [seconds, setSeconds] = useState(30);
   const resendOTP = () => {

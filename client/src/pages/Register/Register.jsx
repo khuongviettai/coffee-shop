@@ -19,9 +19,10 @@ const Register = () => {
       phoneNumber: Yup.string()
         .required("")
         .matches(
-          /([\+84|84|0]+(3|5|7|8|9|1[2|6|8|9]))+([0-9]{8})\b/,
+          /([\+84|84|0]+(3|5|7|8|9|1[2|6|8|9]))+([0-9]{8})\b/, //eslint-disable-line
           "Số điện thoại không hợp lệ"
         ),
+      // eslint-disable-next-line
       password: Yup.string()
         .required("")
         .matches(

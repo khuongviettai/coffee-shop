@@ -2,8 +2,8 @@ const express = require("express");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const cors = require("cors");
-const ImportData = require("./routes/ImportData");
 const productRoutes = require("./routes/productRoutes");
+const userRouters = require("./routes/userRoutes");
 const app = express();
 
 dotenv.config();
@@ -21,7 +21,10 @@ app.listen(PORT, () => {
 });
 
 // import data
-app.use("/api/import", ImportData);
+app.use("/api/import", productRoutes);
 
 // get product
 app.use("/api/products", productRoutes);
+
+// create user
+app.use("/api/user", userRouters);

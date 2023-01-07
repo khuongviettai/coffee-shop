@@ -6,7 +6,6 @@ const userSchema = new mongoose.Schema(
       type: Number,
       unique: true,
       require: true,
-      validate: /([\+84|84|0]+(3|5|7|8|9|1[2|6|8|9]))+([0-9]{8})\b/i,
     },
     password: {
       type: String,
@@ -18,7 +17,8 @@ const userSchema = new mongoose.Schema(
       require: true,
     },
     birthDate: {
-      type: Date,
+      type: String,
+      require: true,
     },
     isAdmin: {
       type: Boolean,

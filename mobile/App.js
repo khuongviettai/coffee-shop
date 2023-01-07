@@ -1,11 +1,12 @@
 import React from 'react';
-import {View, StyleSheet} from 'react-native';
-import Signin from './src/views/Signin';
+import SingleProduct from './src/components/SingleProduct';
+import Login from './src/views/Login';
 
 const App = () => {
-  return <Signin />;
+  return (
+    <SingleProduct />
+    // <Login />
+  );
 };
-
-const styles = StyleSheet.create({});
 
 export default App;
