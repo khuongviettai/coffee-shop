@@ -1,11 +1,12 @@
 import React from 'react';
-import SingleProduct from './src/components/SingleProduct';
+import MainNavigator from './src/navigations/MainNavigator';
 import Login from './src/views/Login';
 
 const App = () => {
   return (
-    <SingleProduct />
     // <Login />
+
+    <MainNavigator />
   );
 };
 

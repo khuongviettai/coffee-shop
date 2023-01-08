@@ -8,9 +8,8 @@ import {
   TextInput,
   Image,
 } from 'react-native';
-import vietnamFlag from '../../assets/icon/vietnam-flag.png';
-import lock from '../../assets/icon/lock.png';
-import user from '../../assets/icon/user.png';
+import icons from '../constants/icons';
+
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 const LOGIN = 'LOGIN';
@@ -127,7 +126,7 @@ const BodyLogin = () => {
           borderColor: '#979797',
           marginTop: -100,
         }}>
-        <Image source={vietnamFlag} style={{width: 20, height: 20}} />
+        <Image source={icons.VietnamFlag} style={{width: 20, height: 20}} />
         <TextInput
           style={{height: '100%', flex: 1, fontSize: 15, marginLeft: 10}}
           placeholder="Số điện thoại"
@@ -144,7 +143,7 @@ const BodyLogin = () => {
           marginTop: 20,
           borderColor: '#979797',
         }}>
-        <Image source={lock} style={{width: 20, height: 20}} />
+        <Image source={icons.Lock} style={{width: 20, height: 20}} />
         <TextInput
           style={{height: '100%', flex: 1, fontSize: 15, marginLeft: 10}}
           placeholder="Mật khẩu"
@@ -198,7 +197,7 @@ const BodyRegister = () => {
           alignItems: 'center',
           borderColor: '#979797',
         }}>
-        <Image source={user} style={{width: 20, height: 20}} />
+        <Image source={icons.User_Register} style={{width: 20, height: 20}} />
         <TextInput
           style={{height: '100%', flex: 1, fontSize: 15, marginLeft: 10}}
           placeholder="Họ và tên"
@@ -214,7 +213,7 @@ const BodyRegister = () => {
           borderColor: '#979797',
           marginTop: 20,
         }}>
-        <Image source={vietnamFlag} style={{width: 20, height: 20}} />
+        <Image source={icons.VietnamFlag} style={{width: 20, height: 20}} />
         <TextInput
           style={{height: '100%', flex: 1, fontSize: 15, marginLeft: 10}}
           placeholder="Số điện thoại"
@@ -231,7 +230,7 @@ const BodyRegister = () => {
           marginTop: 20,
           borderColor: '#979797',
         }}>
-        <Image source={lock} style={{width: 20, height: 20}} />
+        <Image source={icons.Lock} style={{width: 20, height: 20}} />
         <TextInput
           style={{height: '100%', flex: 1, fontSize: 15, marginLeft: 10}}
           placeholder="Mật khẩu"
@@ -249,7 +248,7 @@ const BodyRegister = () => {
           marginTop: 20,
           borderColor: '#979797',
         }}>
-        <Image source={lock} style={{width: 20, height: 20}} />
+        <Image source={icons.Lock} style={{width: 20, height: 20}} />
         <TextInput
           style={{height: '100%', flex: 1, fontSize: 15, marginLeft: 10}}
           placeholder="Mật khẩu"
