@@ -11,6 +11,7 @@ const userSchema = new mongoose.Schema(
       type: String,
       require: true,
       min: 5,
+      max: 128,
     },
     fullName: {
       type: String,
@@ -19,6 +20,13 @@ const userSchema = new mongoose.Schema(
     birthDate: {
       type: String,
       require: true,
+    },
+    email: {
+      type: String,
+    },
+    registerDate: {
+      type: Date,
+      default: Date.now,
     },
     isAdmin: {
       type: Boolean,

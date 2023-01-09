@@ -1,5 +1,7 @@
 const User = require("../models/User");
 const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
+const { json } = require("express/lib/response");
 
 const userController = {
   registerUser: async (req, res) => {
@@ -31,7 +33,14 @@ const userController = {
         res.status(404).json("Password wrong");
       }
       if (user && validPassword) {
-        res.status(200).json(user);
+        const Token = jwt.sign(
+          {
+            id: user.id,
+          },
+          process.env.Token_Key,
+          { expiresIn: "2h" }
+        );
+        res.status(200).json({ user, Token });
       }
     } catch (err) {
       res.status(500).json(err);

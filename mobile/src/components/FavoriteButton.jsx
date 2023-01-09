@@ -15,7 +15,7 @@ const FavoriteButton = ({active, style}) => {
         shadow.light,
         style,
       ]}>
-      <Icon icon={active ? 'Favorite_red' : 'Favorite'} size={24} />
+      <Icon icon={active ? 'Favorite_red' : 'Favorite'} size={20} />
     </View>
   );
 };

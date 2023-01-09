@@ -1,12 +1,19 @@
 import React from 'react';
-import {FlatList, Image, Text, TouchableOpacity, View} from 'react-native';
-import {colors, sizes, spacing} from '../constants/theme';
-import FavoriteButton from './FavoriteButton';
+import {
+  View,
+  StyleSheet,
+  FlatList,
+  Image,
+  Text,
+  TouchableOpacity,
+} from 'react-native';
+import {colors, sizes, spacing} from '../../constants/theme';
+import FavoriteButton from '../FavoriteButton';
 
 const Card_Width = sizes.width - 80;
 const Card_Height = 200;
 const Card_Width_Spacing = Card_Width + spacing.l;
-const TopSell = ({list}) => {
+const Recommend = () => {
   return (
     <FlatList
       data={list}
@@ -32,14 +39,6 @@ const TopSell = ({list}) => {
                 shadowOffset: {width: 0, height: 2},
                 marginVertical: 5,
               }}>
-              <FavoriteButton
-                style={{
-                  position: 'absolute',
-                  top: spacing.m,
-                  right: spacing.m,
-                  zIndex: 1,
-                }}
-              />
               <View
                 style={{
                   width: Card_Width,
@@ -61,7 +60,7 @@ const TopSell = ({list}) => {
                 <Text
                   style={{
                     fontSize: sizes.h3,
-                    fontWeight: '300',
+                    fontWeight: '600',
                     color: colors.mainColor,
                   }}>
                   {item.title}
@@ -75,4 +74,6 @@ const TopSell = ({list}) => {
   );
 };
 
-export default TopSell;
+const styles = StyleSheet.create({});
+
+export default Recommend;
