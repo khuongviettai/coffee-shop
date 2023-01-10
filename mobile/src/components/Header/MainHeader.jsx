@@ -3,7 +3,7 @@ import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import Icon from '../../utils/Icon';
 import {View} from 'react-native';
 import {spacing} from '../../constants/theme';
-const MainHeader = () => {
+const MainHeader = ({title}) => {
   const insets = useSafeAreaInsets();
   return (
     <View

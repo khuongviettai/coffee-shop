@@ -25,10 +25,7 @@ const Register = () => {
       // eslint-disable-next-line
       password: Yup.string()
         .required("")
-        .matches(
-          /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{5,}$/,
-          "Mật khẩu ít nhất cần 5 ký tự, một số và một ký tự viết hoa"
-        ),
+        .matches(/^.{5,}$/, "Mật khẩu cần ít nhất 5 ký tự"),
       confirmPassword: Yup.string()
         .required("")
         .oneOf([Yup.ref("password"), null], "Mật khẩu không chính xác"),

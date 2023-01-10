@@ -64,7 +64,10 @@ const PopularList = ({list}) => {
                     {item.title.substring(0, 20)}
                   </Text>
                   <Text style={{fontSize: 14, color: '#8b8989'}}>
-                    {item.price.toLocaleString()}
+                    {item.price.toLocaleString('vi', {
+                      style: 'currency',
+                      currency: 'VND',
+                    })}
                   </Text>
                 </View>
                 <FavoriteButton />

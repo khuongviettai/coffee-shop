@@ -3,9 +3,10 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {Animated} from 'react-native';
 import Icon from '../utils/Icon';
 import {colors, sizes} from '../constants/theme';
-import ProfileScreen from '../screens/ProfileScreen';
+
 import SearchScreen from '../screens/SearchScreen';
 import HomeScreen from '../screens/HomeScreen';
+import LoginScreen from '../screens/LoginScreen';
 
 const tabs = [
   {
@@ -18,7 +19,7 @@ const tabs = [
   },
   {
     name: 'Profile',
-    screen: ProfileScreen,
+    screen: LoginScreen,
   },
 ];
 const Tab = createBottomTabNavigator();
