@@ -16,11 +16,11 @@ public class MainActivity extends ReactActivity {
     return "Coffee";
   }
 
-  // Add React Navigator
+  // Add react navigator
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(null);
-  } 
+  }
 
   /**
    * Returns the instance of the {@link ReactActivityDelegate}. There the RootView is created and

@@ -10,6 +10,7 @@ import Filter from '../../assets/icon/Filter.png';
 import Back from '../../assets/icon/Back.png';
 import Profile from '../../assets/icon/Profile.png';
 import Favorite_red from '../../assets/icon/Favorite_red.png';
+import Cart from '../../assets/icon/Cart.png';
 
 export default {
   Home,
@@ -24,4 +25,5 @@ export default {
   Back,
   Profile,
   Favorite_red,
+  Cart,
 };
