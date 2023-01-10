@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Collection.scss";
 import Item from "../Item/Item";
 import axios from "axios";
+import { Link } from "react-router-dom";
 const Collection = () => {
   const [products, setProducts] = useState([]);
 
@@ -23,24 +24,24 @@ const Collection = () => {
               <div className="collection__sidebar-menu">
                 <ul className="sidebar__menu-items">
                   <li className="sidebar__menu-list">
-                    <a href="" className="sidebar__menu-list--link">
+                    <Link href="" className="sidebar__menu-list--link">
                       Cà phê
-                    </a>
+                    </Link>
                   </li>
                   <li className="sidebar__menu-list">
-                    <a href="" className="sidebar__menu-list--link">
+                    <Link href="" className="sidebar__menu-list--link">
                       Trà
-                    </a>
+                    </Link>
                   </li>
                   <li className="sidebar__menu-list">
-                    <a href="" className="sidebar__menu-list--link">
+                    <Link href="" className="sidebar__menu-list--link">
                       Snack
-                    </a>
+                    </Link>
                   </li>
                   <li className="sidebar__menu-list">
-                    <a href="" className="sidebar__menu-list--link">
+                    <Link href="" className="sidebar__menu-list--link">
                       Khác
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>

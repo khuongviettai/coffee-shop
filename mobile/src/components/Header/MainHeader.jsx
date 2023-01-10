@@ -3,8 +3,10 @@ import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import Icon from '../../utils/Icon';
 import {View} from 'react-native';
 import {spacing} from '../../constants/theme';
-const MainHeader = ({title}) => {
+
+const MainHeader = ({CartScreen}) => {
   const insets = useSafeAreaInsets();
+
   return (
     <View
       style={{

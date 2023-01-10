@@ -1,5 +1,6 @@
 import React from "react";
 import "./Navbar.scss";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -15,19 +16,19 @@ const Navbar = () => {
             </ul>
             <ul className="sub__navbar-item">
               <li className="sub__navbar-list">
-                <a href="" className="subnav__item-link">
+                <Link className="subnav__item-link">
                   <i class="fa fa-bell-o" aria-hidden="true"></i>
                   Thông báo
-                </a>
+                </Link>
               </li>
               <li className="sub__navbar-list">
-                <a href="" className="subnav__item-link">
+                <Link to="/help" className="subnav__item-link">
                   <i class="fa fa-question-circle-o" aria-hidden="true"></i>
                   Trợ giúp
-                </a>
+                </Link>
               </li>
               <li className="sub__navbar-list sub__navbar-list--strong">
-                Đăng nhập
+                <NavLink to="/login">Đăng nhập</NavLink>
               </li>
             </ul>
           </nav>
@@ -37,29 +38,21 @@ const Navbar = () => {
           <div className="navbar__menu">
             <ul className="navbar__menu-item">
               <li className="navbar__menu-list">
-                <a href="" className="navbar__menu-list--link">
-                  Cà phê
-                </a>
+                <Link className="navbar__menu-list--link">Cà phê</Link>
               </li>
               <li className="navbar__menu-list">
-                <a href="" className="navbar__menu-list--link">
-                  Trà
-                </a>
+                <Link className="navbar__menu-list--link">Trà</Link>
               </li>
               <li className="navbar__menu-list">
-                <a href="" className="navbar__menu-list--link">
+                <Link to="/collection" className="navbar__menu-list--link">
                   Menu
-                </a>
+                </Link>
               </li>
               <li className="navbar__menu-list">
-                <a href="" className="navbar__menu-list--link">
-                  Cảm hứng
-                </a>
+                <Link className="navbar__menu-list--link">Cảm hứng</Link>
               </li>
               <li className="navbar__menu-list">
-                <a href="" className="navbar__menu-list--link">
-                  Tuyển dụng
-                </a>
+                <Link className="navbar__menu-list--link">Tuyển dụng</Link>
               </li>
             </ul>
           </div>

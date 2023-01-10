@@ -1,4 +1,5 @@
 const userController = require("../controller/userController");
+const userValidate = require("../middlewares/Uservalidate");
 
 const routes = require("express").Router();
 

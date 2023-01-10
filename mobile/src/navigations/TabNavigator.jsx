@@ -7,6 +7,8 @@ import {colors, sizes} from '../constants/theme';
 import SearchScreen from '../screens/SearchScreen';
 import HomeScreen from '../screens/HomeScreen';
 import LoginScreen from '../screens/LoginScreen';
+import ProductScreen from '../screens/ProductScreen';
+import PromoScreen from '../screens/PromoScreen';
 
 const tabs = [
   {
@@ -14,8 +16,16 @@ const tabs = [
     screen: HomeScreen,
   },
   {
+    name: 'Coffee',
+    screen: ProductScreen,
+  },
+  {
     name: 'Search',
     screen: SearchScreen,
+  },
+  {
+    name: 'Gift',
+    screen: PromoScreen,
   },
   {
     name: 'Profile',

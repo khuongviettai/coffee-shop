@@ -1,27 +1,26 @@
 import React from "react";
 import "./Item.scss";
+import { Link } from "react-router-dom";
 
 const Item = (props) => {
   return (
     // <div className="flex-wrap dis-flex menu-lists menu__lists-item">
     <div className="items__menu border-box">
       <div className="items__menu-img">
-        <a href="" className="items__menu-img--link">
+        <Link className="items__menu-img--link">
           <img
             className="items__menu-link--img"
             src={props.image}
             alt={props.title}
           />
-        </a>
+        </Link>
       </div>
       <div className="items__menu-info">
         <h3 className="items__menu-title">
-          <a href="" className="items__menu--title-link">
-            {props.title}
-          </a>
+          <Link className="items__menu--title-link">{props.title}</Link>
         </h3>
         <div className="items__menu-price">
-          {props.price.toLocaleString("it-IT", {
+          {props.price.toLocaleString("vi", {
             style: "currency",
             currency: "VND",
           })}

@@ -13,6 +13,9 @@ import Favorite_red from '../../assets/icon/Favorite_red.png';
 import Cart from '../../assets/icon/Cart.png';
 import VietnamFlag from '../../assets/icon/VN-Vietnam.png';
 import Lock from '../../assets/icon/lock.png';
+import Coffee from '../../assets/icon/coffee.png';
+import Gift from '../../assets/icon/Gift.png';
+import Plus from '../../assets/icon/Plus.png';
 
 export default {
   Home,
@@ -30,4 +33,7 @@ export default {
   Cart,
   VietnamFlag,
   Lock,
+  Coffee,
+  Gift,
+  Plus,
 };
