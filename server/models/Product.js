@@ -25,24 +25,34 @@ const productSchema = new mongoose.Schema({
     type: String,
     require: true,
   },
-  category: {
-    type: String,
-    require: true,
-  },
-  image: {
-    type: String,
-  },
-  description: {
-    type: String,
-    require: true,
-  },
   price: {
     type: Number,
     require: true,
   },
   quantity: {
     type: Number,
+  },
+  image: {
+    type: Array,
+  },
+  topping: {
+    type: Array,
+  },
+  size: {
+    type: Array,
+  },
+  description: {
+    type: String,
     require: true,
+  },
+
+  category: {
+    type: String,
+    require: true,
+  },
+  sales: {
+    type: Number,
+    default: 0,
   },
   review: [reviewSchema],
   rating: {

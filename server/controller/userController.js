@@ -40,6 +40,7 @@ const userController = {
           process.env.Token_Key,
           { expiresIn: "2h" }
         );
+
         res.status(200).json({ user, Token });
       }
     } catch (err) {

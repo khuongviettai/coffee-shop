@@ -9,7 +9,7 @@ const App = () => {
   return (
     <Router>
       <div className="App">
-        <Navbar />
+        {/* <Navbar /> */}
         <Routes>
           {publicRoutes.map((route, index) => {
             const Pages = route.component;

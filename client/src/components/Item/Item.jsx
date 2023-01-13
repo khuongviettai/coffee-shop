@@ -7,7 +7,7 @@ const Item = (props) => {
     // <div className="flex-wrap dis-flex menu-lists menu__lists-item">
     <div className="items__menu border-box">
       <div className="items__menu-img">
-        <Link className="items__menu-img--link">
+        <Link to={`/product/${props.id}`} className="items__menu-img--link">
           <img
             className="items__menu-link--img"
             src={props.image}
@@ -17,7 +17,12 @@ const Item = (props) => {
       </div>
       <div className="items__menu-info">
         <h3 className="items__menu-title">
-          <Link className="items__menu--title-link">{props.title}</Link>
+          <Link
+            to={`/product/${props._id}`}
+            className="items__menu--title-link"
+          >
+            {props.title}
+          </Link>
         </h3>
         <div className="items__menu-price">
           {props.price.toLocaleString("vi", {

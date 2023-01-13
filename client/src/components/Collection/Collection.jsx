@@ -1,19 +1,17 @@
 import React, { useEffect, useState } from "react";
 import "./Collection.scss";
 import Item from "../Item/Item";
-import axios from "axios";
 import { Link } from "react-router-dom";
+import instant from "../../routes/instant";
 const Collection = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    const fetchProducts = async () => {
-      const { data } = await axios.get(
-        "https://server-api-guke.onrender.com/api/products"
-      );
+    const fetchData = async () => {
+      const { data } = await instant.get("/api/products");
       setProducts(data);
     };
-    fetchProducts();
+    fetchData();
   }, []);
   return (
     <div className="Collection">
@@ -52,7 +50,7 @@ const Collection = () => {
                   return (
                     <Item
                       id={item._id}
-                      image={item.image}
+                      image={item.image[0]}
                       title={item.title}
                       price={item.price}
                       item={item}

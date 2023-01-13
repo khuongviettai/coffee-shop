@@ -57,7 +57,11 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="navbar__search">
-            <i class="fa fa-search" aria-hidden="true"></i>
+            <i
+              class="fa fa-search"
+              aria-hidden="true"
+              style={{ marginLeft: "10px" }}
+            ></i>
             <input
               type="search"
               name=""
