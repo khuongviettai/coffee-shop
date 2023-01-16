@@ -7,7 +7,7 @@ const CardHeight = 220;
 const ProductItem = ({list}) => {
   return (
     <ScrollView>
-      {list.map((item, index) => {
+      {list?.map((item, index) => {
         return (
           <View
             key={index}
@@ -25,6 +25,7 @@ const ProductItem = ({list}) => {
                   shadowRadius: 4,
                   shadowOpacity: 0.1,
                   shadowOffset: {width: 0, height: 2},
+                  marginRight: 0,
                 }}>
                 <TouchableOpacity
                   style={{
@@ -39,7 +40,7 @@ const ProductItem = ({list}) => {
                       height: CardHeight - 60,
                       resizeMode: 'cover',
                     }}
-                    source={item.image}
+                    source={{uri: item.image}}
                   />
 
                   <View style={{marginTop: spacing.l}}>
@@ -58,7 +59,14 @@ const ProductItem = ({list}) => {
                       </Text>
                     </View>
 
-                    <TouchableOpacity style={{marginLeft: 120}}>
+                    <TouchableOpacity
+                      style={{
+                        width: 30,
+                        height: 30,
+                        marginLeft: 130,
+                        marginRight: 0,
+                        marginTop: 40,
+                      }}>
                       <AddItem />
                     </TouchableOpacity>
                   </View>

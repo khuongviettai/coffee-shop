@@ -17,6 +17,9 @@ import Coffee from '../../assets/icon/coffee.png';
 import Gift from '../../assets/icon/Gift.png';
 import Plus from '../../assets/icon/Plus.png';
 import Next from '../../assets/icon/next.png';
+import Trash from '../../assets/icon/Trash.png';
+import Minus from '../../assets/icon/minus.png';
+import RedMinus from '../../assets/icon/Red_minus.png';
 
 export default {
   Home,
@@ -38,4 +41,7 @@ export default {
   Gift,
   Plus,
   Next,
+  Trash,
+  Minus,
+  RedMinus,
 };

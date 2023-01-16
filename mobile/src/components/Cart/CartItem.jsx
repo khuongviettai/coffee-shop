@@ -1,47 +1,79 @@
 import React from 'react';
-import {Image, Text, View} from 'react-native';
+import {Image, Text, TouchableOpacity, View} from 'react-native';
 import {colors, sizes, spacing} from '../../constants/config';
 import Icon from '../../utils/Icon';
 
 const CartItem = ({list}) => {
   return (
-    <View style={{flex: 1}}>
+    <View>
       {list.map((item, index) => {
         return (
-          <View style={{height: '20%'}} key={index}>
+          <View
+            style={{
+              height: 120,
+              elevation: 15,
+              backgroundColor: 'white',
+              marginVertical: spacing.s,
+              marginHorizontal: spacing.l,
+              paddingHorizontal: 10,
+              flexDirection: 'row',
+              alignItems: 'center',
+              borderRadius: sizes.radius,
+            }}
+            key={index}>
+            <Image
+              source={item.image}
+              style={{width: 100, height: 100, borderRadius: sizes.radius}}
+            />
             <View
               style={{
-                marginLeft: spacing.l,
-                marginRight: spacing.l,
-                backgroundColor: 'white',
-                height: '90%',
-                borderRadius: sizes.radius,
+                flex: 1,
+                marginLeft: spacing.m,
+                paddingVertical: 20,
+                height: 100,
               }}>
-              <View
-                style={{
-                  alignItems: 'center',
-                  marginBottom: spacing.m,
-                  flexDirection: 'row',
-                  height: '100%',
-                }}>
-                <Image
-                  source={item.image}
+              <Text>{item.title}</Text>
+              <Text style={{marginVertical: 8}}>{item.price}</Text>
+            </View>
+            <View>
+              <TouchableOpacity>
+                <Icon
+                  icon="Trash"
                   style={{
-                    width: '30%',
-                    height: '80%',
-                    borderRadius: 12,
-                    marginLeft: spacing.m,
+                    marginLeft: 45,
+                    marginBottom: 38,
+                    width: 25,
+                    height: 25,
                   }}
-                  resizeMode="stretch"
                 />
+              </TouchableOpacity>
 
-                <View style={{marginLeft: spacing.l}}>
-                  <Text style={{marginBottom: spacing.s}}>{item.title}</Text>
-                  <Text>{item.price}</Text>
-                </View>
-                <View>
-                  <Icon style={{width: 20, height: 20}} icon="Plus" />
-                </View>
+              <View style={{flexDirection: 'row', alignItems: 'center'}}>
+                <TouchableOpacity>
+                  <Icon
+                    icon="Plus"
+                    style={{
+                      width: 25,
+                      height: 25,
+                      backgroundColor: colors.mainColor,
+                      borderRadius: 20,
+                    }}
+                  />
+                </TouchableOpacity>
+                <Text style={{fontSize: 25, marginLeft: 8, marginRight: 8}}>
+                  5
+                </Text>
+                <TouchableOpacity>
+                  <Icon
+                    icon="Minus"
+                    style={{
+                      width: 25,
+                      height: 25,
+                      backgroundColor: colors.mainColor,
+                      borderRadius: 20,
+                    }}
+                  />
+                </TouchableOpacity>
               </View>
             </View>
           </View>

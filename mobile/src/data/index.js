@@ -62,3 +62,22 @@ export const SINGLEPRODUCT = [
       'Vị thanh ngọt của đào, vị chua dịu của Cam Vàng nguyên vỏ, vị chát của trà đen tươi được ủ mới mỗi 4 tiếng, cùng hương thơm nồng đặc trưng của sả chính là điểm sáng làm nên sức hấp dẫn của thức uống này.',
   },
 ];
+
+export const SALES = [
+  {
+    id: 7,
+    image: require('../../assets/image/sale1.png'),
+    title: 'Mua 1 tặng 1',
+  },
+  {
+    id: 8,
+    image: require('../../assets/image/sale2.png'),
+    title: 'Free ship',
+  },
+
+  {
+    id: 9,
+    image: require('../../assets/image/sale3.png'),
+    title: 'Giảm 70%',
+  },
+];

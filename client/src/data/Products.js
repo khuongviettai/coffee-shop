@@ -1,0 +1,58 @@
+export const PRODUCTS = [
+  {
+    id: 1,
+    image: [
+      require("../assets/Products/hong-tra-sua-nong.png"),
+      require("../assets/Products/hong-tra-sua-nong2.png"),
+    ],
+    title: "Hồng Trà Sữa Nóng",
+    size: ["S", "M", "L"],
+    quantity: 12,
+    topping: ["Trân Châu", "Thạch", "Macchiato", "Caramel"],
+    price: 30000,
+  },
+  {
+    id: 2,
+    image: [require("../assets/Products/cf-sua-nong.png")],
+    title: "Cà phê sữa nóng",
+    size: ["S", "M", "L"],
+    quantity: 12,
+    topping: ["Trân Châu", "Thạch", "Macchiato", "Caramel"],
+    price: 25000,
+  },
+  {
+    id: 3,
+    image: [
+      require("../assets/Products/hong-tra-sua-tran-chau.png"),
+      require("../assets/Products/hong-tra-sua-tran-chau2.png"),
+      require("../assets/Products/hong-tra-sua-tran-chau3.png"),
+    ],
+    title: "Hồng trà sữa trân châu",
+    size: ["S", "M", "L"],
+    quantity: 10,
+    topping: ["Trân Châu", "Thạch", "Macchiato", "Caramel"],
+    price: 45000,
+  },
+  {
+    id: 4,
+    image: [
+      require("../assets/Products/tdca-nong2.png"),
+      require("../assets/Products/tdcs-nong.png"),
+      require("../assets/Products/tdcs-nong3.png"),
+    ],
+    title: "Trà đào cam sả",
+    size: ["S", "M", "L"],
+    quantity: 10,
+    topping: ["Trân Châu", "Thạch", "Macchiato", "Caramel"],
+    price: 40000,
+  },
+  {
+    id: 4,
+    image: [require("../assets/Products/tra-lai-thom.png")],
+    title: "Trà lài",
+    size: ["S", "M", "L"],
+    quantity: 10,
+    topping: ["Trân Châu", "Thạch", "Macchiato", "Caramel"],
+    price: 30000,
+  },
+];

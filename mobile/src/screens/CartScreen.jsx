@@ -8,7 +8,6 @@ import MainHeader from '../components/Header/MainHeader';
 const CartScreen = () => {
   return (
     <View style={{flex: 1, backgroundColor: colors.bodyColor}}>
-      <MainHeader />
       <CartItem list={POPULAR} />
     </View>
   );
