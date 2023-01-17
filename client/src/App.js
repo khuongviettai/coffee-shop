@@ -1,18 +1,25 @@
 import React from "react";
 import "./App.css";
 import "../node_modules/font-awesome/css/font-awesome.min.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { publicRoutes } from "./routes/MainRoutes";
 import NavbarLayout from "./layouts/Navbar/NavbarLayout";
-import Home from "./pages/Home/Home";
-import Login from "./pages/Login/Login";
-import Register from "./pages/Register/Register";
-import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
-import Products from "./pages/Products/Products";
+import ProfileInfor from "./pages/ProfileInfor";
 
 const App = () => {
   return (
-    <div>
-      <Products />
-    </div>
+    // <Router>
+    //   <div className="App">
+    //     <NavbarLayout />
+    //     <Routes>
+    //       {publicRoutes.map((route, index) => {
+    //         const Pages = route.component;
+    //         return <Route key={index} path={route.path} element={<Pages />} />;
+    //       })}
+    //     </Routes>
+    //   </div>
+    // </Router>
+    <ProfileInfor />
   );
 };
 

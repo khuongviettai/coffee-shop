@@ -1,6 +1,7 @@
 import React from "react";
 import "./LoginComponent.scss";
 import VietNam from "../../../assets/icon/VietNamFlag.png";
+import { Link } from "react-router-dom";
 
 const LoginComponent = () => {
   return (
@@ -46,15 +47,15 @@ const LoginComponent = () => {
               Đăng nhập
             </button>
             <div className="login__linkTo-forgetPassword">
-              <a to="/forgot" className="forgetPassword__link">
+              <Link to="/forgot" className="forgetPassword__link">
                 Quên mật khẩu
-              </a>
+              </Link>
             </div>
             <div className="login__link-toRegister">
               <p>Bạn chưa có tài khoản</p>
-              <a to="/register" className="link__toRegister">
+              <Link to="/register" className="link__toRegister">
                 Đăng ký
-              </a>
+              </Link>
             </div>
           </form>
         </div>

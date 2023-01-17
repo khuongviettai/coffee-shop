@@ -1,0 +1,58 @@
+.ProfileUser__avatar {
+  justify-content: center;
+  display: flex;
+}
+
+.Profile__user-avatar {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  height: 172px;
+  justify-content: center;
+  width: 172px;
+}
+
+.User__avatar-img {
+  border-radius: 50%;
+  height: 9em;
+  object-fit: cover;
+  width: 9em;
+}
+
+.Profile__user-title {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.profile__wrap-label {
+  margin-bottom: 5px;
+}
+.profile__input {
+  width: 450px;
+  height: 30px;
+  font-size: 15px;
+  margin-bottom: 20px;
+  border: 1px solid;
+  border-radius: 6px;
+}
+
+input[type="text"],
+select {
+  padding-left: 15px;
+}
+
+.profile__Address {
+  display: flex;
+  max-width: 450px;
+  justify-content: space-between;
+}
+
+.profile__Address-input {
+  width: 200px;
+  height: 25px;
+}
+.profile__Address-select {
+  width: 200px;
+  height: 30px;
+}

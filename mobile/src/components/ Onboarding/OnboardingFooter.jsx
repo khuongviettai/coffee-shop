@@ -1,15 +1,8 @@
 import React, {useState} from 'react';
 import {Dimensions, Text, TouchableOpacity, View} from 'react-native';
 
-const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
-const OnboardingFooter = ({list}) => {
-  const [currentSate, setCurrentState] = useState(0);
-  const updateCurrentState = e => {
-    const contentOffsetX = e.nativeEvent.contentOffset.x;
-    const currentSate = Math.round(contentOffsetX / windowWidth);
-    setCurrentState(currentSate);
-  };
+const OnboardingFooter = ({list, currentSate, nextSlider}) => {
   return (
     <View
       style={{
@@ -65,7 +58,8 @@ const OnboardingFooter = ({list}) => {
               backgroundColor: 'white',
               justifyContent: 'center',
               alignItems: 'center',
-            }}>
+            }}
+            onPress={nextSlider}>
             <Text style={{fontWeight: 'bold'}}>NEXT</Text>
           </TouchableOpacity>
         </View>

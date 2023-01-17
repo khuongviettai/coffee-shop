@@ -3,6 +3,7 @@ import "./RegisterComponent.scss";
 import Vietnam from "../../../assets/icon/VietNamFlag.png";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { Link } from "react-router-dom";
 
 const RegisterComponent = () => {
   const formik = useFormik({
@@ -134,9 +135,9 @@ const RegisterComponent = () => {
           </button>
           <div className="register__link-toLogin">
             <p>Bạn có tài khoản</p>
-            <a to="/login" className="link__toLogin">
+            <Link to="/login" className="link__toLogin">
               Đăng nhập
-            </a>
+            </Link>
           </div>
         </form>
       </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import "./ProductsComponent.scss";
-import ItemProducts from "../../layouts/ItemProducts/ItemProducts";
+import ItemProducts from "../../../layouts/ItemProducts/ItemProducts";
+import { Link } from "react-router-dom";
 
 const ProductsComponent = ({ list }) => {
   return (
@@ -12,24 +13,24 @@ const ProductsComponent = ({ list }) => {
               <div className="productsComponent__sidebar-menu">
                 <ul className="sidebar__menu-items">
                   <li className="sidebar__menu-list">
-                    <a href="" className="sidebar__menu-list--link">
+                    <Link href="" className="sidebar__menu-list--link">
                       Cà phê
-                    </a>
+                    </Link>
                   </li>
                   <li className="sidebar__menu-list">
-                    <a href="" className="sidebar__menu-list--link">
+                    <Link href="" className="sidebar__menu-list--link">
                       Trà
-                    </a>
+                    </Link>
                   </li>
                   <li className="sidebar__menu-list">
-                    <a href="" className="sidebar__menu-list--link">
+                    <Link href="" className="sidebar__menu-list--link">
                       Snack
-                    </a>
+                    </Link>
                   </li>
                   <li className="sidebar__menu-list">
-                    <a href="" className="sidebar__menu-list--link">
+                    <Link href="" className="sidebar__menu-list--link">
                       Khác
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -40,7 +41,7 @@ const ProductsComponent = ({ list }) => {
                   return (
                     <ItemProducts
                       id={item.id}
-                      image={item.image}
+                      image={item.image[0]}
                       title={item.title}
                       price={item.price}
                       item={item}

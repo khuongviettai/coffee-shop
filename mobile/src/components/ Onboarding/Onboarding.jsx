@@ -3,12 +3,13 @@ import {Dimensions, FlatList, Image, Text, View} from 'react-native';
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
-const Onboarding = ({list}) => {
+const Onboarding = ({list, updateCurrentState}) => {
   return (
     <FlatList
       data={list}
       horizontal
       pagingEnabled
+      onMomentumScrollEnd={updateCurrentState}
       contentContainerStyle={{height: windowHeight * 0.75}}
       showsHorizontalScrollIndicator={false}
       renderItem={({item, index}) => {
