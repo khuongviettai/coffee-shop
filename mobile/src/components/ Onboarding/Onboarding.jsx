@@ -3,11 +3,12 @@ import {Dimensions, FlatList, Image, Text, View} from 'react-native';
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
-const Onboarding = ({list, updateCurrentState}) => {
+const Onboarding = React.forwardRef(({list, updateCurrentState}, ref) => {
   return (
     <FlatList
       data={list}
       horizontal
+      ref={ref}
       pagingEnabled
       onMomentumScrollEnd={updateCurrentState}
       contentContainerStyle={{height: windowHeight * 0.75}}
@@ -44,6 +45,6 @@ const Onboarding = ({list, updateCurrentState}) => {
       }}
     />
   );
-};
+});
 
 export default Onboarding;

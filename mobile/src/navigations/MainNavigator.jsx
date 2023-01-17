@@ -3,8 +3,8 @@ import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native';
 import {StatusBar} from 'react-native';
 import TabDrawer from './TabDrawer';
-import ForgotPassword from '../components/Login/ForgotPassword';
-import LoginScreen from '../screens/LoginScreen';
+// import ForgotPassword from '../components/Login/ForgotPassword';
+// import LoginScreen from '../screens/LoginScreen';
 import CartScreen from '../screens/CartScreen';
 import OnboardingScreen from '../screens/ OnboardingScreen';
 
@@ -25,11 +25,7 @@ const MainNavigator = () => {
         {/*  component={ForgotPassword}*/}
         {/*  options={{headerShown: false}}*/}
         {/*/>*/}
-        {/*<Stack.Screen*/}
-        {/*  name="CartScreen"*/}
-        {/*  component={CartScreen}*/}
-        {/*  options={{headerShown: false}}*/}
-        {/*/>*/}
+
         <Stack.Screen
           name="Onboarding"
           component={OnboardingScreen}
@@ -43,6 +39,11 @@ const MainNavigator = () => {
             useNativeDriver: true,
             gestureEnabled: false,
           }}
+        />
+        <Stack.Screen
+          name="CartScreen"
+          component={CartScreen}
+          options={{headerShown: false}}
         />
       </Stack.Navigator>
     </NavigationContainer>

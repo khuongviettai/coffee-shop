@@ -8,7 +8,7 @@ import {colors} from '../constants/config';
 const windowWidth = Dimensions.get('window').width;
 const OnboardingScreen = () => {
   const [currentSate, setCurrentState] = useState(0);
-  const ref = useRef(null);
+  const ref = useRef();
   const updateCurrentState = e => {
     const contentOffsetX = e.nativeEvent.contentOffset.x;
     const currentSate = Math.round(contentOffsetX / windowWidth);
@@ -16,11 +16,18 @@ const OnboardingScreen = () => {
   };
   const nextSlider = () => {
     const nextSliderState = currentSate + 1;
-    if (nextSliderState != ONBOARDING.length) {
+    if (nextSliderState !== ONBOARDING.length) {
       const offset = nextSliderState * windowWidth;
       ref?.current?.scrollToOffset({offset});
       setCurrentState(nextSliderState);
     }
+  };
+
+  const skipSlider = () => {
+    const lastSlider = ONBOARDING.length - 1;
+    const offset = lastSlider * windowWidth;
+    ref?.current?.scrollToOffset({offset});
+    setCurrentState(lastSlider);
   };
   return (
     <View style={{flex: 1, backgroundColor: colors.lightGray}}>
@@ -33,6 +40,7 @@ const OnboardingScreen = () => {
         list={ONBOARDING}
         currentSate={currentSate}
         nextSlider={nextSlider}
+        skipSlider={skipSlider}
       />
     </View>
   );
