@@ -6,7 +6,8 @@ import TabDrawer from './TabDrawer';
 // import ForgotPassword from '../components/Login/ForgotPassword';
 // import LoginScreen from '../screens/LoginScreen';
 import CartScreen from '../screens/CartScreen';
-import OnboardingScreen from '../screens/ OnboardingScreen';
+import OnboardingScreen from '../screens/OnboardingScreen';
+import productDetailScreen from '../screens/ProductDetailScreen';
 
 const Stack = createStackNavigator();
 
@@ -43,6 +44,11 @@ const MainNavigator = () => {
         <Stack.Screen
           name="CartScreen"
           component={CartScreen}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="ProductDetails"
+          component={productDetailScreen}
           options={{headerShown: false}}
         />
       </Stack.Navigator>

@@ -17,14 +17,6 @@ const productController = {
     const products = await Product.find({});
     res.json(products);
   }),
-  viewSingleProduct: asyncHandler(async (req, res) => {
-    const product = await Product.findById(req.params.id);
-    if (product) {
-      res.status(200).json(product);
-    } else {
-      res.status(404);
-    }
-  }),
 };
 
 module.exports = productController;

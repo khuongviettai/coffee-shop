@@ -50,7 +50,7 @@ const productSchema = new mongoose.Schema({
     type: String,
     require: true,
   },
-  sales: {
+  salesQuantity: {
     type: Number,
     default: 0,
   },

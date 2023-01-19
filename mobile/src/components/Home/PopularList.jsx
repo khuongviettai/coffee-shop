@@ -2,10 +2,12 @@ import React from 'react';
 import {Image, Text, TouchableOpacity, View} from 'react-native';
 import {colors, sizes, spacing} from '../../constants/config';
 import FavoriteButton from '../../utils/FavoriteButton';
+import {useNavigation} from '@react-navigation/native';
 
 const CardWidth = sizes.width / 2 - (spacing.l + spacing.l / 2);
 const CardHeight = 220;
 const PopularList = ({list}) => {
+  const navigation = useNavigation();
   return (
     <View
       style={{
@@ -15,8 +17,11 @@ const PopularList = ({list}) => {
       {list.map((item, index) => {
         return (
           <TouchableOpacity
-            key={item.id}
-            style={{marginLeft: spacing.l, marginBottom: spacing.l}}>
+            key={index}
+            style={{marginLeft: spacing.l, marginBottom: spacing.l}}
+            onPress={() => {
+              navigation.navigate('ProductDetails', {product: item});
+            }}>
             <View
               style={{
                 width: CardWidth,
@@ -43,7 +48,7 @@ const PopularList = ({list}) => {
                     height: CardHeight - 60,
                     resizeMode: 'cover',
                   }}
-                  source={item.image}
+                  source={item.image[0]}
                 />
               </View>
               <View
