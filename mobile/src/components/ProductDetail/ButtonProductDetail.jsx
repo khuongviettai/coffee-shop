@@ -22,7 +22,9 @@ const ButtonProductDetail = () => {
           height: '70%',
           backgroundColor: 'green',
         }}>
-        <Text>Mua Ngay</Text>
+        <Text style={{fontSize: 15, color: colors.white, fontWeight: 'bold'}}>
+          Mua Ngay
+        </Text>
       </View>
       <View
         style={{
@@ -32,7 +34,9 @@ const ButtonProductDetail = () => {
           height: '70%',
           backgroundColor: colors.mainColor,
         }}>
-        <Text>Add to Cart</Text>
+        <Text style={{fontSize: 15, color: colors.white, fontWeight: 'bold'}}>
+          Thêm vào giỏ
+        </Text>
       </View>
     </View>
   );

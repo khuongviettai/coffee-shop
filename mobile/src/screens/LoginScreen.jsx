@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import {View, Dimensions} from 'react-native';
-import HeaderLogin from '../components/Login/HeaderLogin';
-import Login from '../components/Login/Login';
-import Register from '../components/Login/Register';
+import HeaderLogin from '../components/Account/HeaderLogin';
+import Login from '../components/Account/Login';
+import Register from '../components/Account/Register';
 import {useNavigation} from '@react-navigation/native';
 
 const LOGIN = 'LOGIN';

@@ -30,8 +30,8 @@ export const POPULAR = [
     id: 4,
     image: [
       require('../../assets/image/capu-da.png'),
-      require('../../assets/image/capu-da.png'),
-      require('../../assets/image/capu-da.png'),
+      require('../../assets/image/bacsiunong.png'),
+      require('../../assets/image/caramelmacchiatonong.png'),
     ],
     title: 'Capuchino',
     price: 20000,

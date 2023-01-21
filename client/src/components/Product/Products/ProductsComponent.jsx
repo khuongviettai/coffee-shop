@@ -37,18 +37,19 @@ const ProductsComponent = ({ list }) => {
             </div>
             <div className="col-12 col-lg-9 col-md 9 col-xs-12 col-sm-12 productsComponent__item-right">
               <div className="flex-wrap dis-flex menu-lists menu__lists-item">
-                {list.map((item, index) => {
-                  return (
-                    <ItemProducts
-                      id={item.id}
-                      image={item.image[0]}
-                      title={item.title}
-                      price={item.price}
-                      item={item}
-                      key={index}
-                    />
-                  );
-                })}
+                {list &&
+                  list.map((item, index) => {
+                    return (
+                      <ItemProducts
+                        id={item._id}
+                        image={item.image[0]}
+                        title={item.title}
+                        price={item.price}
+                        item={item}
+                        key={index}
+                      />
+                    );
+                  })}
               </div>
             </div>
           </div>

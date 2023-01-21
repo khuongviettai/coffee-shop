@@ -4,8 +4,10 @@ import ProfileHeader from '../Header/ProfileHeader';
 import MainHeader from '../Header/MainHeader';
 import {colors, spacing} from '../../constants/config';
 import Icon from '../../utils/Icon';
+import {useNavigation} from '@react-navigation/native';
 
 const AccountProfile = () => {
+  const navigation = useNavigation();
   return (
     <View style={{flex: 1}}>
       <MainHeader />
@@ -34,6 +36,24 @@ const AccountProfile = () => {
             borderBottomWidth: 1,
             borderColor: colors.lightGray,
           }}></View>
+        {/*<TouchableOpacity*/}
+        {/*  style={{*/}
+        {/*    flexDirection: 'row',*/}
+        {/*    height: '25%',*/}
+        {/*    alignItems: 'center',*/}
+        {/*  }}>*/}
+        {/*  <Icon icon="Profile" />*/}
+        {/*  <Text style={{marginLeft: 12}}>Lịch sử mua hàng</Text>*/}
+        {/*  <Icon icon="Next" style={{marginLeft: 120, width: 20, height: 20}} />*/}
+        {/*</TouchableOpacity>*/}
+        {/*<View*/}
+        {/*  style={{*/}
+        {/*    justifyContent: 'center',*/}
+        {/*    width: '90%',*/}
+        {/*    marginLeft: spacing.s,*/}
+        {/*    borderBottomWidth: 1,*/}
+        {/*    borderColor: colors.lightGray,*/}
+        {/*  }}></View>*/}
         <TouchableOpacity
           style={{
             flexDirection: 'row',
@@ -57,28 +77,14 @@ const AccountProfile = () => {
             flexDirection: 'row',
             height: '25%',
             alignItems: 'center',
-          }}>
+          }}
+          onPress={() => navigation.navigate('LoginScreen')}>
           <Icon icon="Profile" />
-          <Text style={{marginLeft: 12}}>Thông tin cá nhân</Text>
-          <Icon icon="Next" style={{marginLeft: 120, width: 20, height: 20}} />
-        </TouchableOpacity>
-        <View
-          style={{
-            justifyContent: 'center',
-            width: '90%',
-            marginLeft: spacing.s,
-            borderBottomWidth: 1,
-            borderColor: colors.lightGray,
-          }}></View>
-        <TouchableOpacity
-          style={{
-            flexDirection: 'row',
-            height: '25%',
-            alignItems: 'center',
-          }}>
-          <Icon icon="Profile" />
-          <Text style={{marginLeft: 12}}>Thông tin cá nhân</Text>
-          <Icon icon="Next" style={{marginLeft: 120, width: 20, height: 20}} />
+          <Text style={{marginLeft: 12}}>Đăng nhập</Text>
+          <Icon
+            icon="Next"
+            style={{width: 20, height: 20, position: 'absolute', right: 42}}
+          />
         </TouchableOpacity>
         <View
           style={{

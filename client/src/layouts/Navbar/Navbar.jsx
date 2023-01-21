@@ -1,6 +1,8 @@
 import React from "react";
 import "./Navbar.scss";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
   return (
@@ -34,7 +36,9 @@ const Navbar = () => {
           </nav>
         </div>
         <div className="navbar__header">
-          <div className="navbar__logo">V&T Coffee</div>
+          <Link to="/" className="navbar__logo">
+            V&T Coffee
+          </Link>
           <div className="navbar__menu">
             <ul className="navbar__menu-item">
               <li className="navbar__menu-list">
@@ -70,6 +74,15 @@ const Navbar = () => {
               style={{ backgroundColor: "rgba(255,255,255, 0.01)" }}
             />
           </div>
+          <Link to="/cart">
+            <div className="navbar__cart-wrap">
+              <div className="navbar__cart-number">0</div>
+              <FontAwesomeIcon
+                icon={faCartShopping}
+                className="navbar__icon-cartShopping"
+              />
+            </div>
+          </Link>
         </div>
       </div>
     </header>

@@ -20,6 +20,10 @@ import Next from '../../assets/icon/next.png';
 import Trash from '../../assets/icon/Trash.png';
 import Minus from '../../assets/icon/minus.png';
 import RedMinus from '../../assets/icon/Red_minus.png';
+import Bookmark from '../../assets/icon/bookmark.png';
+import Key from '../../assets/icon/key.png';
+import Back2 from '../../assets/icon/arrow-left2.png';
+import Cart2 from '../../assets/icon/shopping-cart.png';
 
 export default {
   Home,
@@ -44,4 +48,8 @@ export default {
   Trash,
   Minus,
   RedMinus,
+  Bookmark,
+  Key,
+  Back2,
+  Cart2,
 };

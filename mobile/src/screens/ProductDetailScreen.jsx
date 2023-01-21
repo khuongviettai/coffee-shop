@@ -18,8 +18,8 @@ const ProductDetailScreen = ({route, navigation}) => {
   // });
   return (
     <View style={{flex: 1}}>
-      <ProductDetail route={route} navigation={navigation} />
       <ScrollView style={{flex: 1}}>
+        <ProductDetail route={route} navigation={navigation} />
         <ProductDetailInfo route={route} />
         <Topping route={route} />
       </ScrollView>

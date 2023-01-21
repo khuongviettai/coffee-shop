@@ -3,13 +3,13 @@ import "./App.css";
 import "../node_modules/font-awesome/css/font-awesome.min.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { publicRoutes } from "./routes/MainRoutes";
-import NavbarLayout from "./layouts/Navbar/NavbarLayout";
+import Navbar from "./layouts/Navbar/Navbar";
 
 const App = () => {
   return (
     <Router>
       <div className="App">
-        <NavbarLayout />
+        <Navbar />
         <Routes>
           {publicRoutes.map((route, index) => {
             const Pages = route.component;

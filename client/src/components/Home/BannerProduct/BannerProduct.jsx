@@ -1,6 +1,7 @@
 import React from "react";
 import "./BannerProduct.scss";
 import Banner from "../../../assets/image/BannerProduct/banner.png";
+import { Link } from "react-router-dom";
 
 const BannerProduct = ({ list }) => {
   return (
@@ -9,26 +10,26 @@ const BannerProduct = ({ list }) => {
         <div className="row">
           <div className="banner__list-home">
             <div className="banner__menu banner__item">
-              <a href="">
+              <Link href="">
                 <img className="banner__menu-img" src={Banner} alt="" />
-              </a>
+              </Link>
             </div>
             {list.map((item, index) => {
               return (
                 <div key={index}>
                   <div className="banner__item">
-                    <a href="">
+                    <Link href="">
                       <img
                         className="banner__item-img"
                         src={item.image}
                         alt=""
                       />
-                    </a>
+                    </Link>
 
                     <div className="banner__item-info">
-                      <a href="">
+                      <Link href="">
                         <h3 className="banner__item-title">{item.title}</h3>
-                      </a>
+                      </Link>
                       <div className="price__product-item">
                         {item.price.toLocaleString("vi", {
                           style: "currency",

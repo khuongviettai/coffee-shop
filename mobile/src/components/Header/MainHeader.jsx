@@ -19,8 +19,8 @@ const MainHeader = () => {
       }}>
       <Icon icon="Hamburger" onPress={() => navigation.openDrawer()} />
       <Icon
-        style={{width: 25, height: 25}}
-        icon="Cart"
+        // style={{width: 25, height: 25}}
+        icon="Cart2"
         onPress={() => navigation.navigate('CartScreen')}
       />
     </View>

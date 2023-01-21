@@ -22,7 +22,7 @@ const CartItem = ({list}) => {
             }}
             key={index}>
             <Image
-              source={item.image}
+              source={item.image[0]}
               style={{width: 100, height: 100, borderRadius: sizes.radius}}
             />
             <View

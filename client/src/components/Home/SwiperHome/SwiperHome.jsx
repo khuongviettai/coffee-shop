@@ -1,5 +1,6 @@
 import React from "react";
 import "./SwiperHome.scss";
+import { Link } from "react-router-dom";
 
 // import css from swiper
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -26,9 +27,11 @@ const SwiperHome = ({ list }) => {
       >
         {list.map((item, index) => {
           return (
-            <SwiperSlide>
-              <div key={index}>
-                <img className="swiperHome__img" src={item.image} />
+            <SwiperSlide key={index}>
+              <div>
+                <Link to="/products">
+                  <img className="swiperHome__img" src={item.image} alt="" />
+                </Link>
               </div>
             </SwiperSlide>
           );

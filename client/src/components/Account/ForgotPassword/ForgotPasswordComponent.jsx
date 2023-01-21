@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./ForgotPasswordComponent.scss";
 import Vietnam from "../../../assets/icon/VietNamFlag.png";
+import { Link } from "react-router-dom";
 
 const ForgotPasswordComponent = () => {
   const [minutes, setMinutes] = useState(1);
@@ -28,7 +29,7 @@ const ForgotPasswordComponent = () => {
     return () => {
       clearInterval(interval);
     };
-  }, [seconds]);
+  }, [seconds, minutes]);
   return (
     <div className="ForgotPasswordComponent">
       <div className="forgotPassword__container">
@@ -97,9 +98,9 @@ const ForgotPasswordComponent = () => {
           </div> */}
           <div className="forgotPassword__link-toRegister">
             <p>Bạn có tài khoản</p>
-            <a href="" className="link__toRegister">
+            <Link href="" className="link__toRegister">
               Đăng nhập
-            </a>
+            </Link>
           </div>
         </form>
       </div>

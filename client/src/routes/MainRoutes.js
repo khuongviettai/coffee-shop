@@ -11,7 +11,7 @@ const publicRoutes = [
   { path: "/register", component: Register },
   { path: "/forgot", component: ForgotPassword },
   { path: "/products", component: Products },
-  { path: "/products/1", component: SingleProduct },
+  { path: "/products/:id", component: SingleProduct },
 ];
 
 export { publicRoutes };
