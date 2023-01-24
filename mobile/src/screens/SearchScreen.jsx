@@ -1,6 +1,6 @@
 import React from 'react';
 import {Text, View} from 'react-native';
-import {colors} from '../constants/config';
+import {colors} from '../constants/theme';
 import SearchInput from '../components/Search/SearchInput';
 import MainHeader from '../components/Header/MainHeader';
 import ShowSearch from '../components/Search/ShowSearch';

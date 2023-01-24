@@ -1,6 +1,6 @@
 import React from 'react';
 import {Image, ScrollView, Text, TouchableOpacity, View} from 'react-native';
-import {colors, sizes, spacing} from '../../constants/config';
+import {colors, sizes, spacing} from '../../constants/theme';
 import AddItem from '../../utils/AddItem';
 
 const CardHeight = 220;

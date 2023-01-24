@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {TextInput, View} from 'react-native';
 import Icon from '../../utils/Icon';
-import {colors, sizes, spacing} from '../../constants/config';
+import {colors, sizes, spacing} from '../../constants/theme';
 
 const SearchInput = () => {
   const [search, setSearch] = useState('');

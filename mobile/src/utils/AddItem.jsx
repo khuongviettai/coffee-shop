@@ -1,6 +1,6 @@
 import React from 'react';
 import {View} from 'react-native';
-import {colors, shadow} from '../constants/config';
+import {colors, shadow} from '../constants/theme';
 import Icon from './Icon';
 
 const AddItem = () => {

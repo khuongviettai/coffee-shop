@@ -2,7 +2,7 @@ import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {Animated} from 'react-native';
 import Icon from '../utils/Icon';
-import {colors, sizes} from '../constants/config';
+import {colors, sizes} from '../constants/theme';
 import PromoScreen from '../screens/PromoScreen';
 import HomeNavigator from './HomeNavigator';
 import ProductNavigator from './ProductNavigator';

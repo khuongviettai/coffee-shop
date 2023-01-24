@@ -1,6 +1,6 @@
 import React from 'react';
 import {FlatList, Image, TouchableOpacity, View, Text} from 'react-native';
-import {colors, sizes, spacing} from '../../constants/config';
+import {colors, sizes, spacing} from '../../constants/theme';
 
 const Card_Width = sizes.width - 80;
 const Card_Height = 200;

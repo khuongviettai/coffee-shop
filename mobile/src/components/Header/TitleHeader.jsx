@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Text} from 'react-native';
-import {sizes, spacing} from '../../constants/config';
+import {sizes, spacing} from '../../constants/theme';
 
 const TitleHeader = ({mainTitle, secondTitle}) => {
   return (

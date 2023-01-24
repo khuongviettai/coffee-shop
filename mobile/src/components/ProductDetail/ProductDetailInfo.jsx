@@ -1,6 +1,6 @@
 import React from 'react';
 import {Text, View} from 'react-native';
-import {spacing} from '../../constants/config';
+import {spacing} from '../../constants/theme';
 
 const ProductDetailInfo = ({route}) => {
   const {product} = route.params;

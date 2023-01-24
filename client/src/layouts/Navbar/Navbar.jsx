@@ -3,8 +3,12 @@ import "./Navbar.scss";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
+import avatar from "../../assets/icon/avatar.png";
 
 const Navbar = () => {
+  const [user, setUser] = useState("hello");
+  const [open, setOpen] = useState(false);
   return (
     <header className="Header__navbar">
       <div className="container">
@@ -19,18 +23,43 @@ const Navbar = () => {
             <ul className="sub__navbar-item">
               <li className="sub__navbar-list">
                 <Link className="subnav__item-link">
-                  <i class="fa fa-bell-o" aria-hidden="true"></i>
+                  <i className="fa fa-bell-o" aria-hidden="true"></i>
                   Thông báo
                 </Link>
               </li>
               <li className="sub__navbar-list">
                 <Link to="/help" className="subnav__item-link">
-                  <i class="fa fa-question-circle-o" aria-hidden="true"></i>
+                  <i className="fa fa-question-circle-o" aria-hidden="true"></i>
                   Trợ giúp
                 </Link>
               </li>
               <li className="sub__navbar-list sub__navbar-list--strong">
-                <Link to="/login">Đăng nhập</Link>
+                {user ? (
+                  <>
+                    <div className="navbar__user--account">
+                      <div className="vt__user--account">
+                        <div className="avatar__user-account">
+                          <img
+                            className="avatar__user-account--img"
+                            src={avatar}
+                            alt=""
+                          />
+                          <div className="user__account-dropdown">
+                            <ul className="user__account--list">
+                              <li className="user__account--item">hello</li>
+                              <li className="user__account--item">hello</li>
+                              <li className="user__account--item">hello</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </>
+                ) : (
+                  <li className="sub__navbar-list sub__navbar-list--strong">
+                    <Link to="/login">Đăng nhập</Link>
+                  </li>
+                )}
               </li>
             </ul>
           </nav>
@@ -62,7 +91,7 @@ const Navbar = () => {
           </div>
           <div className="navbar__search">
             <i
-              class="fa fa-search"
+              className="fa fa-search"
               aria-hidden="true"
               style={{ marginLeft: "10px" }}
             ></i>

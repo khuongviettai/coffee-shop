@@ -2,7 +2,7 @@ import React from 'react';
 import {Text, TouchableOpacity, View} from 'react-native';
 import ProfileHeader from '../Header/ProfileHeader';
 import MainHeader from '../Header/MainHeader';
-import {colors, spacing} from '../../constants/config';
+import {colors, spacing} from '../../constants/theme';
 import Icon from '../../utils/Icon';
 import {useNavigation} from '@react-navigation/native';
 

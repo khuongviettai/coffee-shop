@@ -2,7 +2,7 @@ import React from 'react';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import Icon from '../../utils/Icon';
 import {View} from 'react-native';
-import {spacing} from '../../constants/config';
+import {spacing} from '../../constants/theme';
 import {useNavigation} from '@react-navigation/native';
 
 const MainHeader = () => {

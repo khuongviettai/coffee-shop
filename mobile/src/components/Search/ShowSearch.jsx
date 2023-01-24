@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {Text, TouchableOpacity, View} from 'react-native';
-import {colors, spacing} from '../../constants/config';
+import {colors, spacing} from '../../constants/theme';
 
 const ShowSearch = ({items}) => {
   const [index, setIndex] = useState();

@@ -3,7 +3,7 @@ import {Dimensions, View} from 'react-native';
 import {ONBOARDING} from '../data/onboarding';
 import Onboarding from '../components/ Onboarding/Onboarding';
 import OnboardingFooter from '../components/ Onboarding/OnboardingFooter';
-import {colors} from '../constants/config';
+import {colors} from '../constants/theme';
 
 const windowWidth = Dimensions.get('window').width;
 const OnboardingScreen = () => {

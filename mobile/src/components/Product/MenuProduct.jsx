@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Text, TouchableOpacity, Dimensions, Image} from 'react-native';
-import {colors, sizes, spacing} from '../../constants/config';
+import {colors, sizes, spacing} from '../../constants/theme';
 
 const windowWidth = 100;
 const windowHeight = 100;

@@ -59,7 +59,7 @@ const ForgotPasswordComponent = () => {
               </label>
             </div>
             <div className="form__wrap-input">
-              <i class="fa fa-lock" aria-hidden="true"></i>
+              <i className="fa fa-lock" aria-hidden="true"></i>
               <input
                 type="text"
                 className="form__text-input"

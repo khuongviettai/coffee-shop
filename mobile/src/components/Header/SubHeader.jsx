@@ -1,5 +1,5 @@
 import React from 'react';
-import {sizes, spacing} from '../../constants/config';
+import {sizes, spacing} from '../../constants/theme';
 import Icon from '../../utils/Icon';
 import {Text, View} from 'react-native';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';

@@ -1,7 +1,7 @@
 import React from 'react';
 import {View} from 'react-native';
 import CartItem from '../components/Cart/CartItem';
-import {colors} from '../constants/config';
+import {colors} from '../constants/theme';
 import {POPULAR} from '../data';
 import MainHeader from '../components/Header/MainHeader';
 

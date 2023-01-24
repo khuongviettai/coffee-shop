@@ -1,6 +1,6 @@
 import React from 'react';
 import {Image, Text, TouchableOpacity, View} from 'react-native';
-import {colors, sizes, spacing} from '../../constants/config';
+import {colors, sizes, spacing} from '../../constants/theme';
 import Icon from '../../utils/Icon';
 
 const CartItem = ({list}) => {

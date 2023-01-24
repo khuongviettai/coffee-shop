@@ -51,7 +51,7 @@ const RegisterComponent = () => {
               </label>
             </div>
             <div className="form__wrap-input">
-              <i class="fa fa-user" aria-hidden="true"></i>
+              <i className="fa fa-user" aria-hidden="true"></i>
               <input
                 type="text"
                 placeholder="Họ và tên"
@@ -93,7 +93,7 @@ const RegisterComponent = () => {
               </label>
             </div>
             <div className="form__wrap-input">
-              <i class="fa fa-lock" aria-hidden="true"></i>
+              <i className="fa fa-lock" aria-hidden="true"></i>
               <input
                 type="password"
                 placeholder="Mật khẩu"
@@ -114,7 +114,7 @@ const RegisterComponent = () => {
               </label>
             </div>
             <div className="form__wrap-input">
-              <i class="fa fa-lock" aria-hidden="true"></i>
+              <i className="fa fa-lock" aria-hidden="true"></i>
               <input
                 type="password"
                 placeholder="Nhập lại mật khẩu"

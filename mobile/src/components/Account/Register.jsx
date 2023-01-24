@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React from 'react';
 import {View, Image, Text, TextInput, TouchableOpacity} from 'react-native';
 import icons from '../../constants/icons';
 import {useFormik} from 'formik';

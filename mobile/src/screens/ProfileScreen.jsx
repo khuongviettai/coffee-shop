@@ -1,7 +1,7 @@
 import React from 'react';
 import {View} from 'react-native';
 import AccountProfile from '../components/Profile/AccountProfile';
-import {colors} from '../constants/config';
+import {colors} from '../constants/theme';
 
 const ProfileScreen = () => {
   return (

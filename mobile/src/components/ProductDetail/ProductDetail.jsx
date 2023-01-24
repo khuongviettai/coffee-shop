@@ -7,7 +7,7 @@ import {
   View,
 } from 'react-native';
 import Icon from '../../utils/Icon';
-import {spacing} from '../../constants/config';
+import {spacing} from '../../constants/theme';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 
 const windowHeight = Dimensions.get('window').height;

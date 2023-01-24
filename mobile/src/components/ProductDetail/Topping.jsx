@@ -1,7 +1,7 @@
 import React from 'react';
 import {Text, View} from 'react-native';
 import CheckBox from '@react-native-community/checkbox';
-import {spacing} from '../../constants/config';
+import {spacing} from '../../constants/theme';
 
 const Topping = ({route}) => {
   const {product} = route.params;
