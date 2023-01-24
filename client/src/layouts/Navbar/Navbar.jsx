@@ -7,8 +7,9 @@ import { useState } from "react";
 import avatar from "../../assets/icon/avatar.png";
 
 const Navbar = () => {
-  const [user, setUser] = useState("hello");
+  const [user] = useState("hello");
   const [open, setOpen] = useState(false);
+
   return (
     <header className="Header__navbar">
       <div className="container">
@@ -16,12 +17,12 @@ const Navbar = () => {
           <nav className="sub__navbar">
             <ul className="sub__navbar-item">
               <li className="sub__navbar-list sub__navbar-list--separate">
-                Vào ứng dụng V&T Coffee
+                Vào ứng dụng V&T
               </li>
               <li className="sub__navbar-list">Kết nối</li>
             </ul>
             <ul className="sub__navbar-item">
-              <li className="sub__navbar-list">
+              <li className="sub__navbar-list sub__navbar-list--separate2">
                 <Link className="subnav__item-link">
                   <i className="fa fa-bell-o" aria-hidden="true"></i>
                   Thông báo
@@ -43,12 +44,21 @@ const Navbar = () => {
                             className="avatar__user-account--img"
                             src={avatar}
                             alt=""
+                            onClick={() => {
+                              setOpen(!open);
+                            }}
                           />
-                          <div className="user__account-dropdown">
+                          <div
+                            className={`user__account-dropdown ${
+                              open ? "active" : "inactive"
+                            }`}
+                          >
                             <ul className="user__account--list">
-                              <li className="user__account--item">hello</li>
-                              <li className="user__account--item">hello</li>
-                              <li className="user__account--item">hello</li>
+                              <li className="user__account--item">
+                                <Link to="" className="user__account--info">
+                                  Thông tin cá nhân
+                                </Link>
+                              </li>
                             </ul>
                           </div>
                         </div>
