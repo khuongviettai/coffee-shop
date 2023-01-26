@@ -24,6 +24,8 @@ import Bookmark from '../../assets/icon/bookmark.png';
 import Key from '../../assets/icon/key.png';
 import Back2 from '../../assets/icon/arrow-left2.png';
 import Cart2 from '../../assets/icon/shopping-cart.png';
+import Voucher from '../../assets/icon/Voucher.png';
+import Voucher2 from '../../assets/icon/Voucher2.png';
 
 export default {
   Home,
@@ -52,4 +54,6 @@ export default {
   Key,
   Back2,
   Cart2,
+  Voucher,
+  Voucher2,
 };

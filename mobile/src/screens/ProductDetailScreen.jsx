@@ -1,6 +1,6 @@
-import React, {useEffect, useState} from 'react';
+import React, {useRef} from 'react';
 import ProductDetail from '../components/ProductDetail/ProductDetail';
-import {ScrollView, View} from 'react-native';
+import {Animated, ScrollView, View} from 'react-native';
 import instance from '../routes/instance';
 import ButtonProductDetail from '../components/ProductDetail/ButtonProductDetail';
 import ProductDetailInfo from '../components/ProductDetail/ProductDetailInfo';
@@ -16,13 +16,22 @@ const ProductDetailScreen = ({route, navigation}) => {
   //     })
   //     .catch(error => console.log(error));
   // });
+  const scrollY = useRef(new Animated.Value(0)).current;
   return (
     <View style={{flex: 1}}>
-      <ScrollView style={{flex: 1}}>
-        <ProductDetail route={route} navigation={navigation} />
+      <Animated.ScrollView
+        style={{flex: 1}}
+        onScroll={Animated.event(
+          [{nativeEvent: {contentOffset: {y: scrollY}}}],
+          {useNativeDriver: true},
+        )}
+        scrollEventThrottle={16}>
+        <Animated.View>
+          <ProductDetail route={route} navigation={navigation} />
+        </Animated.View>
         <ProductDetailInfo route={route} />
         <Topping route={route} />
-      </ScrollView>
+      </Animated.ScrollView>
       <ButtonProductDetail />
     </View>
   );

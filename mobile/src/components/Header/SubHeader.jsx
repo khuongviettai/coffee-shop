@@ -14,11 +14,14 @@ const SubHeader = ({subTitle}) => {
         alignContent: 'center',
         paddingHorizontal: spacing.l,
         marginTop: insets.top,
+        marginBottom: spacing.l,
       }}>
       <Icon icon="Back2" />
-      <Text style={{fontSize: sizes.h3, fontWeight: 'bold'}}>{subTitle}</Text>
-      <Icon icon="Cart2" />
-      {/*<View style={{width: 32, height: 32}}></View>*/}
+      <Text style={{fontSize: sizes.h3, fontWeight: 'bold', marginTop: 5}}>
+        {subTitle}
+      </Text>
+      {/*<Icon icon="Cart2" />*/}
+      <View style={{width: 32, height: 32}}></View>
     </View>
   );
 };

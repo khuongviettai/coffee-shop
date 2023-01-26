@@ -5,10 +5,29 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import avatar from "../../assets/icon/avatar.png";
+import { useRef } from "react";
+import { useEffect } from "react";
 
 const Navbar = () => {
-  const [user] = useState("hello");
+  const [user] = useState(null);
   const [open, setOpen] = useState(false);
+
+  let menuRef = useRef();
+
+  useEffect(() => {
+    let handler = (e) => {
+      if (!menuRef.current.contains(e.target)) {
+        setOpen(false);
+        console.log(menuRef.current);
+      }
+    };
+
+    document.addEventListener("mousedown", handler);
+
+    return () => {
+      document.removeEventListener("mousedown", handler);
+    };
+  });
 
   return (
     <header className="Header__navbar">
@@ -39,7 +58,7 @@ const Navbar = () => {
                   <>
                     <div className="navbar__user--account">
                       <div className="vt__user--account">
-                        <div className="avatar__user-account">
+                        <div className="avatar__user-account" ref={menuRef}>
                           <img
                             className="avatar__user-account--img"
                             src={avatar}
@@ -53,10 +72,26 @@ const Navbar = () => {
                               open ? "active" : "inactive"
                             }`}
                           >
-                            <ul className="user__account--list">
-                              <li className="user__account--item">
-                                <Link to="" className="user__account--info">
-                                  Thông tin cá nhân
+                            <h3 className="user__dropdown-name">{user}</h3>
+                            <ul className="user__dropdown-list">
+                              <li className="user__dropdown-item">
+                                <Link className="user__dropdown-item--link">
+                                  Profile
+                                </Link>
+                              </li>
+                              <li className="user__dropdown-item">
+                                <Link className="user__dropdown-item--link">
+                                  Profile
+                                </Link>
+                              </li>
+                              <li className="user__dropdown-item">
+                                <Link className="user__dropdown-item--link">
+                                  Profile
+                                </Link>
+                              </li>
+                              <li className="user__dropdown-item">
+                                <Link className="user__dropdown-item--link">
+                                  Profile
                                 </Link>
                               </li>
                             </ul>

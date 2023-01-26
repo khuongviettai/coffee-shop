@@ -11,7 +11,7 @@ const CartItem = ({list}) => {
           <View
             style={{
               height: 120,
-              elevation: 15,
+              // elevation: 15,
               backgroundColor: 'white',
               marginVertical: spacing.s,
               marginHorizontal: spacing.l,

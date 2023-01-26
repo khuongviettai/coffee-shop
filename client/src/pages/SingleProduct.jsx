@@ -5,10 +5,11 @@ import Review from "../components/Review/Review";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import axiosLink from "../instance/axiosLink";
+import Navbar from "../layouts/Navbar/Navbar";
 
 const SingleProduct = () => {
   const { id } = useParams();
-  const [product, setProduct] = useState();
+  const [product, setProduct] = useState([]);
   useEffect(() => {
     axiosLink
       .get(`/api/products/${id}`)
@@ -22,6 +23,7 @@ const SingleProduct = () => {
 
   return (
     <div>
+      <Navbar />
       <SingleProductComponent list={product} />
       {/* <RelatedProducts list={product} /> */}
       <Review />

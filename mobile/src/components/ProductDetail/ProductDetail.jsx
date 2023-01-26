@@ -10,8 +10,8 @@ import Icon from '../../utils/Icon';
 import {spacing} from '../../constants/theme';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 
-const windowHeight = Dimensions.get('window').height;
 const windowWidth = Dimensions.get('window').width;
+
 const ProductDetail = ({route, navigation: {goBack}}) => {
   const insets = useSafeAreaInsets();
   const {product} = route.params;
@@ -34,7 +34,6 @@ const ProductDetail = ({route, navigation: {goBack}}) => {
         horizontal
         pagingEnabled
         data={product.image}
-        // contentContainerStyle={{height: windowHeight * 0.75}}
         renderItem={({item, index}) => {
           return (
             <View key={index}>

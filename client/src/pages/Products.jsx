@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import ProductsComponent from "../components/Product/Products/ProductsComponent";
 import axiosLink from "../instance/axiosLink";
+import Navbar from "../layouts/Navbar/Navbar";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -16,6 +17,7 @@ const Products = () => {
   }, []);
   return (
     <div>
+      <Navbar />
       <ProductsComponent list={products} />
     </div>
   );
