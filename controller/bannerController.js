@@ -1,5 +1,4 @@
 const Banner = require("../models/Banner");
-const asyncHandler = require("express-async-handler");
 
 const bannerController = {
   uploadBanner: async (req, res) => {
