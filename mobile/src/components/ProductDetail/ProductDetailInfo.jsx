@@ -1,22 +1,36 @@
 import React from 'react';
 import {Text, View} from 'react-native';
-import {spacing} from '../../constants/theme';
+import {colors, spacing} from '../../constants/theme';
 
 const ProductDetailInfo = ({route}) => {
   const {product} = route.params;
   return (
-    <View>
-      <View style={{marginLeft: spacing.l, marginTop: spacing.s}}>
-        <Text style={{fontSize: 25, fontWeight: '500'}}>{product.title}</Text>
-        <Text style={{fontSize: 14, color: '#8b8989', marginTop: spacing.s}}>
-          {product.price.toLocaleString('vi', {
-            style: 'currency',
-            currency: 'VND',
-          })}
-        </Text>
-        <Text style={{marginTop: spacing.s, marginRight: spacing.l}}>
-          {product.description}
-        </Text>
+    <View style={{backgroundColor: colors.white, marginTop: spacing.m}}>
+      <View>
+        <View style={{marginLeft: spacing.l, marginTop: spacing.m}}>
+          <Text
+            style={{
+              fontSize: 18,
+              fontWeight: 'bold',
+            }}>
+            Size
+          </Text>
+          <Text style={{fontSize: 14, marginTop: 2, color: colors.gray}}>
+            Chọn 1 loại size
+          </Text>
+        </View>
+        {product.size.map((item, index) => {
+          return (
+            <View
+              key={index}
+              style={{
+                marginLeft: spacing.l,
+                marginVertical: spacing.l,
+              }}>
+              <Text>{item}</Text>
+            </View>
+          );
+        })}
       </View>
     </View>
   );

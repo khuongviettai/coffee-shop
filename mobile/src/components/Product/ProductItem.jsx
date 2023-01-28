@@ -1,12 +1,12 @@
 import React from 'react';
-import {Image, ScrollView, Text, TouchableOpacity, View} from 'react-native';
+import {Image, Text, TouchableOpacity, View} from 'react-native';
 import {colors, sizes, spacing} from '../../constants/theme';
 import AddItem from '../../utils/AddItem';
 
 const CardHeight = 220;
-const ProductItem = ({list}) => {
+const ProductItem = ({list, handleSnapPress}) => {
   return (
-    <ScrollView>
+    <View>
       {list?.map((item, index) => {
         return (
           <View
@@ -40,13 +40,20 @@ const ProductItem = ({list}) => {
                       height: CardHeight - 60,
                       resizeMode: 'cover',
                     }}
-                    source={{uri: item.image}}
+                    source={{uri: item.image[0]}}
                   />
 
                   <View style={{marginTop: spacing.l}}>
                     <View
-                      style={{marginLeft: spacing.l, marginBottom: spacing.s}}>
-                      <Text style={{fontSize: 16, color: '#FA4A0C'}}>
+                      style={{
+                        marginLeft: spacing.l,
+                        marginBottom: spacing.s,
+                      }}>
+                      <Text
+                        style={{
+                          fontSize: 16,
+                          color: colors.mainColor,
+                        }}>
                         {item.title}
                       </Text>
                     </View>
@@ -58,25 +65,25 @@ const ProductItem = ({list}) => {
                         })}
                       </Text>
                     </View>
-
-                    <TouchableOpacity
-                      style={{
-                        width: 30,
-                        height: 30,
-                        marginLeft: 130,
-                        marginRight: 0,
-                        marginTop: 40,
-                      }}>
-                      <AddItem />
-                    </TouchableOpacity>
                   </View>
+                  <TouchableOpacity
+                    style={{
+                      width: 30,
+                      height: 30,
+                      position: 'absolute',
+                      right: 20,
+                      bottom: 20,
+                    }}
+                    onPress={() => handleSnapPress(0)}>
+                    <AddItem />
+                  </TouchableOpacity>
                 </TouchableOpacity>
               </View>
             </View>
           </View>
         );
       })}
-    </ScrollView>
+    </View>
   );
 };
 

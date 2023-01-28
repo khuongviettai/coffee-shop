@@ -13,8 +13,8 @@ const SingleProduct = () => {
   useEffect(() => {
     axiosLink
       .get(`/api/products/${id}`)
-      .then(({ data }) => {
-        setProduct(data);
+      .then((data) => {
+        setProduct(data.data);
       })
       .catch((error) => console.log(error));
   }, [id]);

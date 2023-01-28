@@ -26,8 +26,14 @@ const CartButton = () => {
           backgroundColor: colors.mainColor,
           position: 'absolute',
           bottom: 0,
+          borderRadius: 10,
         }}>
-        <Text style={{color: '#F6F6F9', fontSize: 20, fontWeight: '600'}}>
+        <Text
+          style={{
+            color: '#F6F6F9',
+            fontSize: 20,
+            fontWeight: '600',
+          }}>
           Thanh Toán
         </Text>
       </TouchableOpacity>

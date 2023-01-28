@@ -33,7 +33,12 @@ const CartItem = ({list}) => {
                 height: 100,
               }}>
               <Text>{item.title}</Text>
-              <Text style={{marginVertical: 8}}>{item.price}</Text>
+              <Text style={{marginVertical: 8, color: '#8b8989'}}>
+                {item.price.toLocaleString('vi', {
+                  style: 'currency',
+                  currency: 'VND',
+                })}
+              </Text>
             </View>
             <View>
               <TouchableOpacity>
@@ -53,22 +58,22 @@ const CartItem = ({list}) => {
                   <Icon
                     icon="Plus"
                     style={{
-                      width: 25,
-                      height: 25,
+                      width: 22,
+                      height: 22,
                       backgroundColor: colors.mainColor,
                       borderRadius: 20,
                     }}
                   />
                 </TouchableOpacity>
-                <Text style={{fontSize: 25, marginLeft: 8, marginRight: 8}}>
+                <Text style={{fontSize: 20, marginLeft: 8, marginRight: 8}}>
                   5
                 </Text>
                 <TouchableOpacity>
                   <Icon
                     icon="Minus"
                     style={{
-                      width: 25,
-                      height: 25,
+                      width: 22,
+                      height: 22,
                       backgroundColor: colors.mainColor,
                       borderRadius: 20,
                     }}

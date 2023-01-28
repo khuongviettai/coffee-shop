@@ -1,8 +1,8 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {Animated} from 'react-native';
+import {Text, View} from 'react-native';
 import Icon from '../utils/Icon';
-import {colors, sizes} from '../constants/theme';
+import {colors} from '../constants/theme';
 import PromoScreen from '../screens/PromoScreen';
 import HomeNavigator from './HomeNavigator';
 import ProductNavigator from './ProductNavigator';
@@ -11,29 +11,33 @@ import ProfileNavigator from './ProfileNavigator';
 
 const tabs = [
   {
+    title: 'Home',
     name: 'Home',
     screen: HomeNavigator,
   },
   {
+    title: 'Coffee',
     name: 'Coffee',
     screen: ProductNavigator,
   },
   {
+    title: 'Tìm kiếm',
     name: 'Search',
     screen: SearchNavigator,
   },
   {
+    title: 'Ưu đãi',
     name: 'Gift',
     screen: PromoScreen,
   },
   {
+    title: 'Cá nhân',
     name: 'Profile',
     screen: ProfileNavigator,
   },
 ];
 const Tab = createBottomTabNavigator();
 const TabNavigator = () => {
-  const offsetAnimation = React.useRef(new Animated.Value(0)).current;
   return (
     <>
       <Tab.Navigator
@@ -42,31 +46,34 @@ const TabNavigator = () => {
           headerShown: false,
           tabBarShowLabel: false,
         }}>
-        {tabs.map(({name, screen}, index) => {
+        {tabs.map(({name, screen, title}, index) => {
           return (
             <Tab.Screen
-              key={name}
+              key={index}
               name={name}
               component={screen}
               options={{
                 tabBarIcon: ({focused}) => {
                   return (
-                    <Icon
-                      icon={name}
-                      size={40}
-                      style={{
-                        tintColor: focused ? colors.mainColor : colors.gray,
-                      }}
-                    />
+                    <View>
+                      <Icon
+                        icon={name}
+                        size={40}
+                        style={{
+                          tintColor: focused ? colors.mainColor : colors.gray,
+                        }}
+                      />
+                      <Text
+                        style={{
+                          textAlign: 'center',
+                          fontSize: 12,
+                          marginTop: -2,
+                          color: focused ? colors.mainColor : colors.gray,
+                        }}>
+                        {title}
+                      </Text>
+                    </View>
                   );
-                },
-              }}
-              listeners={{
-                focus: () => {
-                  Animated.spring(offsetAnimation, {
-                    toValue: index * (sizes.width / tabs.length),
-                    useNativeDriver: true,
-                  }).start();
                 },
               }}
             />

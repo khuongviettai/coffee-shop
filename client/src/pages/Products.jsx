@@ -15,6 +15,7 @@ const Products = () => {
       })
       .catch((error) => console.log(error));
   }, []);
+
   return (
     <div>
       <Navbar />

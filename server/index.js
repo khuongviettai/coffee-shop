@@ -17,7 +17,7 @@ mongoose.connect(process.env.MONGODB_LINK, () => {
 
 const PORT = process.env.PORT;
 app.listen(PORT, () => {
-  console.log("Server is running on port 8000...");
+  console.log(`Server is running on port ${PORT}...`);
 });
 
 // import data

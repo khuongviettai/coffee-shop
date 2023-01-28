@@ -12,7 +12,7 @@ const CartScreen = () => {
   return (
     <View style={{flex: 1, backgroundColor: colors.bodyColor}}>
       <SubHeader subTitle="Giỏ hàng" />
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
         <CartItem list={POPULAR} />
       </ScrollView>
       <View style={{marginBottom: 100}}>

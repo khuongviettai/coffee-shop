@@ -3,7 +3,7 @@ import {View} from 'react-native';
 import {colors, shadow} from '../constants/theme';
 import Icon from './Icon';
 
-const AddItem = () => {
+const AddItem = ({style}) => {
   return (
     <View
       style={[
@@ -13,6 +13,7 @@ const AddItem = () => {
           borderRadius: 20,
         },
         shadow.light,
+        style,
       ]}>
       <Icon icon="Plus" size={25} />
     </View>
