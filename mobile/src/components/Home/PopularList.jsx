@@ -1,7 +1,6 @@
 import React from 'react';
 import {Image, Text, TouchableOpacity, View} from 'react-native';
 import {colors, sizes, spacing} from '../../constants/theme';
-import FavoriteButton from '../../utils/FavoriteButton';
 import {useNavigation} from '@react-navigation/native';
 
 const CardWidth = sizes.width / 2 - (spacing.l + spacing.l / 2);
@@ -76,7 +75,6 @@ const PopularList = ({list}) => {
                     })}
                   </Text>
                 </View>
-                <FavoriteButton />
               </View>
             </View>
           </TouchableOpacity>

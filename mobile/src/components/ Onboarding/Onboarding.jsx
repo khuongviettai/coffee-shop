@@ -15,7 +15,7 @@ const Onboarding = React.forwardRef(({list, updateCurrentState}, ref) => {
       showsHorizontalScrollIndicator={false}
       renderItem={({item, index}) => {
         return (
-          <View style={{alignItems: 'center'}}>
+          <View key={index} style={{alignItems: 'center'}}>
             <Image
               source={item.image}
               style={{height: '75%', width: windowWidth}}

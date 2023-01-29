@@ -1,5 +1,12 @@
 import React, {useRef, useState} from 'react';
-import {Dimensions, FlatList, Image, Text, View} from 'react-native';
+import {
+  Dimensions,
+  FlatList,
+  Image,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import {colors, spacing} from '../../constants/theme';
 import FavoriteButton from '../../utils/FavoriteButton';
 
@@ -20,7 +27,6 @@ const ProductDetailImage = ({route}) => {
         ref={ref}
         onMomentumScrollEnd={updateCurrentState}
         pagingEnabled={true}
-        scrollEventThrottle={200}
         decelerationRate="fast"
         showsHorizontalScrollIndicator={false}
         data={product.image}
@@ -50,7 +56,7 @@ const ProductDetailImage = ({route}) => {
                     marginHorizontal: 3,
                     borderRadius: 2,
                   },
-                  currentSate == index && {
+                  currentSate === index && {
                     backgroundColor: colors.mainColor,
                     width: 25,
                   },
@@ -83,9 +89,10 @@ const ProductDetailImage = ({route}) => {
             })}
           </Text>
         </View>
-        <View style={{marginRight: spacing.l, marginTop: spacing.l}}>
+        <TouchableOpacity
+          style={{marginRight: spacing.l, marginTop: spacing.l}}>
           <FavoriteButton style={{width: 28, height: 28}} />
-        </View>
+        </TouchableOpacity>
       </View>
     </View>
   );

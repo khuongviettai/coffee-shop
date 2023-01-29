@@ -48,11 +48,13 @@ const ProductItem = ({list, handleSnapPress}) => {
                       style={{
                         marginLeft: spacing.l,
                         marginBottom: spacing.s,
+                        width: '85%',
                       }}>
                       <Text
                         style={{
                           fontSize: 16,
                           color: colors.mainColor,
+                          flexWrap: 'wrap',
                         }}>
                         {item.title}
                       </Text>

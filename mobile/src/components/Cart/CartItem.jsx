@@ -56,7 +56,7 @@ const CartItem = ({list}) => {
               <View style={{flexDirection: 'row', alignItems: 'center'}}>
                 <TouchableOpacity>
                   <Icon
-                    icon="Plus"
+                    icon="Minus"
                     style={{
                       width: 22,
                       height: 22,
@@ -70,7 +70,7 @@ const CartItem = ({list}) => {
                 </Text>
                 <TouchableOpacity>
                   <Icon
-                    icon="Minus"
+                    icon="Plus"
                     style={{
                       width: 22,
                       height: 22,

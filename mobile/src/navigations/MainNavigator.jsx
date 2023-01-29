@@ -8,6 +8,9 @@ import LoginScreen from '../screens/LoginScreen';
 import CartScreen from '../screens/CartScreen';
 import OnboardingScreen from '../screens/OnboardingScreen';
 import productDetailScreen from '../screens/ProductDetailScreen';
+import ProfileScreen from '../screens/ProfileScreen';
+import PromoScreen from '../screens/PromoScreen';
+import SearchScreen from '../screens/SearchScreen';
 
 const Stack = createStackNavigator();
 
@@ -31,7 +34,7 @@ const MainNavigator = () => {
           }}
         />
         <Stack.Screen
-          name="CartScreen"
+          name="Cart"
           component={CartScreen}
           options={{headerShown: false}}
         />
@@ -41,13 +44,28 @@ const MainNavigator = () => {
           options={{headerShown: false}}
         />
         <Stack.Screen
-          name="LoginScreen"
+          name="Login"
           component={LoginScreen}
           options={{headerShown: false}}
         />
         <Stack.Screen
           name="ForgotPassword"
           component={ForgotPassword}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Profile"
+          component={ProfileScreen}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Promo"
+          component={PromoScreen}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Search"
+          component={SearchScreen}
           options={{headerShown: false}}
         />
       </Stack.Navigator>

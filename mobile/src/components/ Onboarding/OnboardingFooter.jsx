@@ -1,6 +1,7 @@
 import React from 'react';
 import {Dimensions, Text, TouchableOpacity, View} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
+import {colors} from '../../constants/theme';
 
 const windowHeight = Dimensions.get('window').height;
 const OnboardingFooter = ({list, currentSate, nextSlider, skipSlider}) => {
@@ -23,14 +24,14 @@ const OnboardingFooter = ({list, currentSate, nextSlider, skipSlider}) => {
             <View
               style={[
                 {
-                  height: 2.5,
+                  height: 3.5,
                   width: 10,
                   backgroundColor: 'gray',
                   marginHorizontal: 3,
                   borderRadius: 2,
                 },
-                currentSate == index && {
-                  backgroundColor: 'white',
+                currentSate === index && {
+                  backgroundColor: colors.mainColor,
                   width: 25,
                 },
               ]}
@@ -39,7 +40,7 @@ const OnboardingFooter = ({list, currentSate, nextSlider, skipSlider}) => {
         })}
       </View>
       <View style={{marginBottom: 50}}>
-        {currentSate == list.length - 1 ? (
+        {currentSate === list.length - 1 ? (
           <View style={{height: 50}}>
             <TouchableOpacity
               style={{
