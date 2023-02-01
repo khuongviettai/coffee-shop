@@ -31,7 +31,7 @@ const OnboardingFooter = ({list, currentSate, nextSlider, skipSlider}) => {
                   borderRadius: 2,
                 },
                 currentSate === index && {
-                  backgroundColor: colors.mainColor,
+                  backgroundColor: colors.white,
                   width: 25,
                 },
               ]}

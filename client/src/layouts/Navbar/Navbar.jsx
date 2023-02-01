@@ -9,7 +9,7 @@ import { useRef } from "react";
 import { useEffect } from "react";
 
 const Navbar = () => {
-  const [user] = useState(null);
+  const [user] = useState("tai");
   const [open, setOpen] = useState(false);
 
   let menuRef = useRef();

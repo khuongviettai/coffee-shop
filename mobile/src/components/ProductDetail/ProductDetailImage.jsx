@@ -11,6 +11,7 @@ import {colors, spacing} from '../../constants/theme';
 import FavoriteButton from '../../utils/FavoriteButton';
 
 const windowWidth = Dimensions.get('window').width;
+
 const ProductDetailImage = ({route}) => {
   const {product} = route.params;
   const [currentSate, setCurrentState] = useState(0);

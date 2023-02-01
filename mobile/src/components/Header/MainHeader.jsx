@@ -21,7 +21,7 @@ const MainHeader = () => {
       <Icon
         // style={{width: 25, height: 25}}
         icon="Cart2"
-        onPress={() => navigation.navigate('CartScreen')}
+        onPress={() => navigation.navigate('Cart')}
       />
     </View>
   );

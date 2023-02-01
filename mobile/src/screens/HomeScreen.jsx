@@ -6,10 +6,11 @@ import MenuSlider from '../components/Home/MenuSlider';
 import {Top_Sell, POPULAR} from '../data';
 import SectionHeader from '../components/Header/SectionHeader';
 import PopularList from '../components/Home/PopularList';
+import {colors} from '../constants/theme';
 
 const HomeScreen = () => {
   return (
-    <View style={{flex: 1, backgroundColor: '#fbfbfb'}}>
+    <View style={{flex: 1, backgroundColor: colors.bodyColor}}>
       <MainHeader />
       <TitleHeader mainTitle="Gợi ý" secondTitle="cho bạn" />
       <ScrollView showsVerticalScrollIndicator={false}>

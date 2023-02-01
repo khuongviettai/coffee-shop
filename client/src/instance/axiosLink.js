@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosLink = axios.create({
-  baseURL: "http://localhost:8000/",
+  baseURL: "https://vt-coffee-api.onrender.com/",
   responseType: "json",
 });
 

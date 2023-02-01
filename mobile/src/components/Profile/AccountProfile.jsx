@@ -78,7 +78,7 @@ const AccountProfile = () => {
             height: '25%',
             alignItems: 'center',
           }}
-          onPress={() => navigation.navigate('LoginScreen')}>
+          onPress={() => navigation.navigate('Login')}>
           <Icon icon="Profile" />
           <Text style={{marginLeft: 12}}>Đăng nhập</Text>
           <Icon

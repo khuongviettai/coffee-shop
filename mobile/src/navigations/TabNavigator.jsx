@@ -6,8 +6,8 @@ import {colors} from '../constants/theme';
 import PromoScreen from '../screens/PromoScreen';
 import HomeNavigator from './HomeNavigator';
 import ProductNavigator from './ProductNavigator';
-import SearchNavigator from './SearchNavigator';
-import ProfileNavigator from './ProfileNavigator';
+import ProfileScreen from '../screens/ProfileScreen';
+import SearchScreen from '../screens/SearchScreen';
 
 const tabs = [
   {
@@ -23,7 +23,7 @@ const tabs = [
   {
     title: 'Tìm kiếm',
     name: 'Search',
-    screen: SearchNavigator,
+    screen: SearchScreen,
   },
   {
     title: 'Ưu đãi',
@@ -33,7 +33,7 @@ const tabs = [
   {
     title: 'Cá nhân',
     name: 'Profile',
-    screen: ProfileNavigator,
+    screen: ProfileScreen,
   },
 ];
 const Tab = createBottomTabNavigator();

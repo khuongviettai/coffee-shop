@@ -174,18 +174,20 @@
   transform: rotate(45deg);
 }
 
-.user__account-dropdown.active {
+.user__account-dropdown {
   opacity: 1;
+  z-index: 99;
+}
+.active {
   visibility: visible;
   transform: translateY(0);
-  transition: 300ms ease;
+  transition: 300ms ease-in;
 }
 
-.user__account-dropdown.inactive {
-  opacity: 1;
+.inactive {
   visibility: hidden;
   transform: translateY(-20px);
-  transition: 300ms ease;
+  transition: 300ms ease-out;
 }
 
 .user__dropdown-item {
@@ -194,7 +196,6 @@
   .user__dropdown-item--link {
     max-width: 100px;
     margin-left: 10px;
-    transition: 300ms ease;
   }
 }
 .user__dropdown-item--link:hover {

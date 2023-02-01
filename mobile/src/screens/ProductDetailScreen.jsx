@@ -8,12 +8,9 @@ import ProductDetailButton from '../components/ProductDetail/ProductDetailButton
 const ProductDetailScreen = ({route}) => {
   return (
     <View style={{backgroundColor: colors.bodyColor, flex: 1}}>
-      <ScrollView
-        showsVerticalScrollIndicator={false}
-        scrollEventThrottle={200}>
-        <ProductDetailImage route={route} />
-        <ProductDetailInfo route={route} />
-      </ScrollView>
+      <ProductDetailImage route={route} />
+      <ProductDetailInfo route={route} />
+
       <ProductDetailButton />
     </View>
   );
