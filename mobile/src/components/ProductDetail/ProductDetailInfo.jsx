@@ -5,7 +5,12 @@ import {colors, spacing} from '../../constants/theme';
 const ProductDetailInfo = ({route}) => {
   const {product} = route.params;
   return (
-    <View style={{backgroundColor: colors.white, marginTop: spacing.m}}>
+    <View
+      style={{
+        backgroundColor: colors.white,
+        marginTop: spacing.m,
+        marginBottom: 200,
+      }}>
       <View>
         <View style={{marginLeft: spacing.l, marginTop: spacing.m}}>
           <Text

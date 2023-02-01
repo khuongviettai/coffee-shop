@@ -11,8 +11,7 @@ import {colors, spacing} from '../../constants/theme';
 import FavoriteButton from '../../utils/FavoriteButton';
 
 const windowWidth = Dimensions.get('window').width;
-
-const ProductDetailImage = ({route}) => {
+const ProductDetailImage = ({route, scrollY}) => {
   const {product} = route.params;
   const [currentSate, setCurrentState] = useState(0);
   const ref = useRef();
@@ -21,8 +20,14 @@ const ProductDetailImage = ({route}) => {
     const currentSate = Math.round(contentOffsetX / windowWidth);
     setCurrentState(currentSate);
   };
+  const isFloating = !!scrollY;
+
   return (
-    <View style={{backgroundColor: colors.white}}>
+    <View
+      style={{
+        backgroundColor: colors.white,
+        marginBottom: isFloating ? -50 : 0,
+      }}>
       <FlatList
         horizontal={true}
         ref={ref}

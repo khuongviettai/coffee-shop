@@ -11,7 +11,7 @@ import productDetailScreen from '../screens/ProductDetailScreen';
 import ProfileScreen from '../screens/ProfileScreen';
 import PromoScreen from '../screens/PromoScreen';
 import SearchScreen from '../screens/SearchScreen';
-import TabNavigator from './TabNavigator';
+import ProductScreen from '../screens/ProductScreen';
 
 const Stack = createStackNavigator();
 
@@ -40,8 +40,8 @@ const MainNavigator = () => {
           component={CartScreen}
           options={{
             title: 'Giỏi hàng',
-            headerShown: true,
             headerBackTitle: false,
+            headerBackTitleVisible: false,
           }}
         />
         <Stack.Screen
@@ -49,10 +49,10 @@ const MainNavigator = () => {
           component={productDetailScreen}
           options={{
             title: null,
-            headerShown: true,
             headerBackTitle: false,
             headerTitle: false,
             headerBackTitleVisible: false,
+            headerTransparent: true,
           }}
         />
         <Stack.Screen
@@ -78,6 +78,11 @@ const MainNavigator = () => {
         <Stack.Screen
           name="Search"
           component={SearchScreen}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Product"
+          component={ProductScreen}
           options={{headerShown: false}}
         />
       </Stack.Navigator>
