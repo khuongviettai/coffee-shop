@@ -23,10 +23,14 @@ const AccountProfile = () => {
             flexDirection: 'row',
             height: '25%',
             alignItems: 'center',
-          }}>
+          }}
+          onPress={() => navigation.navigate('PersonalInfo')}>
           <Icon icon="Profile" />
           <Text style={{marginLeft: 12}}>Thông tin cá nhân</Text>
-          <Icon icon="Next" style={{marginLeft: 120, width: 20, height: 20}} />
+          <Icon
+            icon="Next"
+            style={{width: 20, height: 20, position: 'absolute', right: 42}}
+          />
         </TouchableOpacity>
         <View
           style={{
@@ -61,8 +65,11 @@ const AccountProfile = () => {
             alignItems: 'center',
           }}>
           <Icon icon="Profile" />
-          <Text style={{marginLeft: 12}}>Thông tin cá nhân</Text>
-          <Icon icon="Next" style={{marginLeft: 120, width: 20, height: 20}} />
+          <Text style={{marginLeft: 12}}>Địa chỉ đã lưu</Text>
+          <Icon
+            icon="Next"
+            style={{width: 20, height: 20, position: 'absolute', right: 42}}
+          />
         </TouchableOpacity>
         <View
           style={{

@@ -7,13 +7,17 @@ import {Top_Sell, POPULAR} from '../data';
 import SectionHeader from '../components/Header/SectionHeader';
 import PopularList from '../components/Home/PopularList';
 import {colors} from '../constants/theme';
+import HomeSwiper from '../components/Home/HomeSwiper';
+import {SWIPER} from '../data/swiper';
 
 const HomeScreen = () => {
   return (
     <View style={{flex: 1, backgroundColor: colors.bodyColor}}>
       <MainHeader />
-      <TitleHeader mainTitle="Gợi ý" secondTitle="cho bạn" />
+
       <ScrollView showsVerticalScrollIndicator={false}>
+        <HomeSwiper list={SWIPER} />
+        <TitleHeader mainTitle="Gợi ý" secondTitle="cho bạn" />
         <MenuSlider list={Top_Sell} />
         <SectionHeader title="Phổ biến" buttonTitle="More" onPress={() => {}} />
         <PopularList list={POPULAR} />

@@ -7,7 +7,7 @@ import ProductItem from '../components/Product/ProductItem';
 import instance from '../instance/instance';
 import ProductOption from '../components/Product/ProductOption';
 
-const ProductScreen = () => {
+const ProductScreen = ({route}) => {
   const [isOpen, setIsOpen] = useState(true);
   const bottomSheetRef = useRef(null);
   const snapPoints = ['80%'];
@@ -35,6 +35,7 @@ const ProductScreen = () => {
         <ProductItem list={products} handleSnapPress={handleSnapPress} />
       </ScrollView>
       <ProductOption
+        route={route}
         snapPoints={snapPoints}
         bottomSheetRef={bottomSheetRef}
         handleClosePress={handleClosePress}

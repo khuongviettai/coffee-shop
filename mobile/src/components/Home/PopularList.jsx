@@ -18,9 +18,7 @@ const PopularList = ({list}) => {
           <TouchableOpacity
             key={index}
             style={{marginLeft: spacing.l, marginBottom: spacing.l}}
-            onPress={() => {
-              navigation.navigate('ProductDetails', {product: item});
-            }}>
+            onPress={() => {}}>
             <View
               style={{
                 width: CardWidth,

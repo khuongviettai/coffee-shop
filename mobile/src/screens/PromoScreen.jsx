@@ -2,12 +2,12 @@ import React from 'react';
 import {View} from 'react-native';
 import PromoItem from '../components/Promo/PromoItem';
 import {UUDAI} from '../data/uudai';
-import SubHeader from '../components/Header/SubHeader';
+import MainHeader from '../components/Header/MainHeader';
 
 const PromoScreen = () => {
   return (
     <View>
-      <SubHeader subTitle="Ưu đãi" />
+      <MainHeader />
       <PromoItem list={UUDAI} />
     </View>
   );

@@ -1,9 +1,10 @@
 import React from 'react';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import Icon from '../../utils/Icon';
-import {View} from 'react-native';
-import {spacing} from '../../constants/theme';
+import {Text, TouchableOpacity, View} from 'react-native';
+import {colors, spacing} from '../../constants/theme';
 import {useNavigation} from '@react-navigation/native';
+import Notification from '../../../assets/icon/Notification.png';
 
 const MainHeader = () => {
   const insets = useSafeAreaInsets();
@@ -18,11 +19,34 @@ const MainHeader = () => {
         marginTop: insets.top,
       }}>
       <Icon icon="Hamburger" onPress={() => navigation.openDrawer()} />
-      <Icon
-        // style={{width: 25, height: 25}}
-        icon="Cart2"
-        onPress={() => navigation.navigate('Cart')}
-      />
+      <View style={{flexDirection: 'row'}}>
+        <Icon icon="Notification" />
+        <TouchableOpacity onPress={() => navigation.navigate('Cart')}>
+          <Icon
+            style={{width: 30, height: 30, marginLeft: 15}}
+            icon="Cart"
+            // onPress={() => navigation.navigate('Cart')}
+          />
+          <View
+            style={{
+              position: 'absolute',
+              right: -5,
+              top: -5,
+              width: 20,
+              height: 20,
+              borderRadius: 25,
+              borderColor: colors.mainColor,
+              backgroundColor: colors.mainColor,
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}>
+            <Text
+              style={{color: colors.white, fontSize: 14, fontWeight: '500'}}>
+              5
+            </Text>
+          </View>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };

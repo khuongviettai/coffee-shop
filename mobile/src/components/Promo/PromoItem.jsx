@@ -10,6 +10,7 @@ const PromoItem = ({list}) => {
       style={{
         flexDirection: 'row',
         flexWrap: 'wrap',
+        marginVertical: spacing.l,
       }}>
       {list.map((item, index) => {
         return (

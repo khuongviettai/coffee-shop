@@ -29,6 +29,7 @@ const tabs = [
     title: 'Ưu đãi',
     name: 'Gift',
     screen: PromoScreen,
+    tabBarBadge: 4,
   },
   {
     title: 'Cá nhân',
@@ -46,13 +47,14 @@ const TabNavigator = () => {
           headerShown: false,
           tabBarShowLabel: false,
         }}>
-        {tabs.map(({name, screen, title}, index) => {
+        {tabs.map(({name, screen, title, tabBarBadge}, index) => {
           return (
             <Tab.Screen
               key={index}
               name={name}
               component={screen}
               options={{
+                tabBarBadge: tabBarBadge,
                 tabBarIcon: ({focused}) => {
                   return (
                     <View>

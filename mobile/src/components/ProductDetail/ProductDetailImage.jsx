@@ -39,7 +39,10 @@ const ProductDetailImage = ({route, scrollY}) => {
         renderItem={({item, index}) => {
           return (
             <View key={index}>
-              <Image source={item} style={{width: windowWidth, height: 400}} />
+              <Image
+                source={{uri: item}}
+                style={{width: windowWidth, height: 400}}
+              />
             </View>
           );
         }}
@@ -49,7 +52,7 @@ const ProductDetailImage = ({route, scrollY}) => {
           style={{
             flexDirection: 'row',
             justifyContent: 'center',
-            marginTop: 5,
+            marginTop: -5,
           }}>
           {product.image.map((item, index) => {
             return (

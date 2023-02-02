@@ -4,7 +4,12 @@ import {Text, TouchableOpacity, View} from 'react-native';
 import {colors} from '../../constants/theme';
 import Icon from '../../utils/Icon';
 
-const ProductOption = ({snapPoints, bottomSheetRef, handleClosePress}) => {
+const ProductOption = ({
+  snapPoints,
+  bottomSheetRef,
+  handleClosePress,
+  route,
+}) => {
   return (
     <BottomSheet
       index={-1}

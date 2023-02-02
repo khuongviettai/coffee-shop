@@ -12,6 +12,7 @@ import ProfileScreen from '../screens/ProfileScreen';
 import PromoScreen from '../screens/PromoScreen';
 import SearchScreen from '../screens/SearchScreen';
 import ProductScreen from '../screens/ProductScreen';
+import PersonalInfoScreen from '../screens/PersonalInfoScreen';
 
 const Stack = createStackNavigator();
 
@@ -70,11 +71,7 @@ const MainNavigator = () => {
           component={ProfileScreen}
           options={{headerShown: false}}
         />
-        <Stack.Screen
-          name="Promo"
-          component={PromoScreen}
-          options={{headerShown: false}}
-        />
+        <Stack.Screen name="Promo" component={PromoScreen} />
         <Stack.Screen
           name="Search"
           component={SearchScreen}
@@ -84,6 +81,16 @@ const MainNavigator = () => {
           name="Product"
           component={ProductScreen}
           options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="PersonalInfo"
+          component={PersonalInfoScreen}
+          options={{
+            title: 'Thông tin cá nhân',
+            headerBackTitle: false,
+            headerTitle: false,
+            headerBackTitleVisible: false,
+          }}
         />
       </Stack.Navigator>
     </NavigationContainer>

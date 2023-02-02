@@ -8,7 +8,7 @@ const SearchInput = () => {
   return (
     <View
       style={{
-        paddingHorizontal: spacing.l,
+        marginHorizontal: spacing.l,
         paddingTop: spacing.l,
         paddingBottom: spacing.l,
       }}>

@@ -11,6 +11,7 @@ const ProductDetailScreen = ({route}) => {
     <View style={{backgroundColor: colors.bodyColor, flex: 1}}>
       <Animated.ScrollView
         showsVerticalScrollIndicator={false}
+        decelerationRate="normal"
         onScroll={Animated.event(
           [{nativeEvent: {contentOffset: {y: scrollY}}}],
           {useNativeDriver: true},

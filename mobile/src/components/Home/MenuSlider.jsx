@@ -29,6 +29,7 @@ const MenuSlider = ({list}) => {
                 overflow: 'hidden',
                 shadowColor: colors.black,
                 shadowRadius: 4,
+                borderRadius: sizes.radius,
                 shadowOpacity: 0.1,
                 shadowOffset: {width: 0, height: 2},
                 marginVertical: 5,

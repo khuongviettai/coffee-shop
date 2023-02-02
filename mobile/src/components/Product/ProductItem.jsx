@@ -2,9 +2,11 @@ import React from 'react';
 import {Image, Text, TouchableOpacity, View} from 'react-native';
 import {colors, sizes, spacing} from '../../constants/theme';
 import AddItem from '../../utils/AddItem';
+import {useNavigation} from '@react-navigation/native';
 
 const CardHeight = 220;
 const ProductItem = ({list, handleSnapPress}) => {
+  const navigation = useNavigation();
   return (
     <View>
       {list?.map((item, index) => {
@@ -32,6 +34,9 @@ const ProductItem = ({list, handleSnapPress}) => {
                     borderRadius: sizes.radius,
                     overflow: 'hidden',
                     flexDirection: 'row',
+                  }}
+                  onPress={() => {
+                    navigation.navigate('ProductDetails', {product: item});
                   }}>
                   <Image
                     style={{
