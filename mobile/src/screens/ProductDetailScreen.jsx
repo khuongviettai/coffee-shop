@@ -1,5 +1,5 @@
 import React, {useRef} from 'react';
-import {Animated, ScrollView, View} from 'react-native';
+import {Animated, View} from 'react-native';
 import ProductDetailImage from '../components/ProductDetail/ProductDetailImage';
 import ProductDetailInfo from '../components/ProductDetail/ProductDetailInfo';
 import {colors} from '../constants/theme';

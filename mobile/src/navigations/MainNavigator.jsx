@@ -1,68 +1,43 @@
-import React, {useState} from 'react';
+import React from 'react';
+import {StatusBar} from 'react-native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native';
-import {StatusBar} from 'react-native';
-import ForgotPassword from '../components/Account/ForgotPassword';
-import LoginScreen from '../screens/LoginScreen';
-import CartScreen from '../screens/CartScreen';
 import OnboardingScreen from '../screens/OnboardingScreen';
-import productDetailScreen from '../screens/ProductDetailScreen';
-import PromoScreen from '../screens/PromoScreen';
-import AsyncStorage from '@react-native-async-storage/async-storage';
-import TabNavigator from './TabNavigator';
-import AddressSave from '../components/Profile/Address/AddressSave';
-import AddressHome from '../components/Profile/Address/AddressHome';
-import PersonalInfo from '../components/Profile/PersonalInfo';
-const Stack = createStackNavigator();
+import BottomTabNavigator from './BottomTabNavigator';
+import ProductDetailScreen from '../screens/ProductDetailScreen';
+import LoginScreen from '../screens/LoginScreen';
+import ForgotPassword from '../components/Account/ForgotPassword';
+import AddressSave from '../components/Other/Address/AddressSave';
+import AddressHome from '../components/Other/Address/AddressHome';
+import CartScreen from '../screens/CartScreen';
+import PersonalAccountInfo from '../components/Other/PersonalAccount/PersonalAccountInfo';
+import Provision from '../components/Other/Utilities/Provision';
+import PromotionDetail from '../components/Promotion/PromotionDetail';
 
+const Stack = createStackNavigator();
 const MainNavigator = () => {
-  const [firstAppOnboarding, setFirstAppOnboarding] = useState(null);
-  const getData = async () => {
-    try {
-      const storeData = await AsyncStorage.getItem('firstAppOnboarding');
-      if (storeData == null) {
-        setFirstAppOnboarding(true);
-      } else {
-        setFirstAppOnboarding(false);
-      }
-    } catch (e) {
-      console.log(e);
-    }
-  };
   return (
     <NavigationContainer>
       <StatusBar hidden />
       <Stack.Navigator>
-        {firstAppOnboarding && (
-          <Stack.Screen
-            name="Onboarding"
-            component={OnboardingScreen}
-            options={{headerShown: false}}
-          />
-        )}
-
+        <Stack.Screen
+          name="Onboarding"
+          component={OnboardingScreen}
+          options={{headerShown: false}}
+        />
         <Stack.Screen
           name="Root"
-          component={TabNavigator}
+          component={BottomTabNavigator}
           options={{
             headerShown: false,
             useNativeDriver: true,
             gestureEnabled: false,
           }}
         />
-        <Stack.Screen
-          name="Cart"
-          component={CartScreen}
-          options={{
-            title: 'Giỏi hàng',
-            headerBackTitle: false,
-            headerBackTitleVisible: false,
-            headerTintColor: '#333',
-          }}
-        />
+
         <Stack.Screen
           name="ProductDetails"
-          component={productDetailScreen}
+          component={ProductDetailScreen}
           options={{
             title: null,
             headerBackTitle: false,
@@ -90,18 +65,7 @@ const MainNavigator = () => {
           component={ForgotPassword}
           options={{headerShown: false}}
         />
-        <Stack.Screen
-          name="PersonalInfo"
-          component={PersonalInfo}
-          options={{
-            title: 'Thông tin cá nhân',
-            headerBackTitle: false,
-            headerTitle: false,
-            headerBackTitleVisible: false,
-            headerTintColor: '#333',
-          }}
-        />
-        <Stack.Screen name="Promo" component={PromoScreen} />
+
         <Stack.Screen
           name="AddressSave"
           component={AddressSave}
@@ -126,9 +90,52 @@ const MainNavigator = () => {
             headerTintColor: '#333',
           }}
         />
+        <Stack.Screen
+          name="Cart"
+          component={CartScreen}
+          options={{
+            title: 'Giỏ hàng',
+            headerBackTitle: false,
+            headerTitle: false,
+            headerBackTitleVisible: false,
+            headerTintColor: '#333',
+          }}
+        />
+        <Stack.Screen
+          name="PersonalAccountInfo"
+          component={PersonalAccountInfo}
+          options={{
+            title: 'Thông tin cá nhân',
+            headerBackTitle: false,
+            headerTitle: false,
+            headerBackTitleVisible: false,
+            headerTintColor: '#333',
+          }}
+        />
+        <Stack.Screen
+          name="Provision"
+          component={Provision}
+          options={{
+            title: 'Điều khoản',
+            headerBackTitle: false,
+            headerTitle: false,
+            headerBackTitleVisible: false,
+            headerTintColor: '#333',
+          }}
+        />
+        <Stack.Screen
+          name="PromotionDetail"
+          component={PromotionDetail}
+          options={{
+            title: false,
+            headerBackTitle: false,
+            headerTitle: false,
+            headerBackTitleVisible: false,
+            headerTintColor: '#333',
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
 };
-
 export default MainNavigator;

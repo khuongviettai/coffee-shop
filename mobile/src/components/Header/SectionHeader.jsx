@@ -2,7 +2,10 @@ import React from 'react';
 import {Button, Text, View} from 'react-native';
 import {spacing} from '../../constants/theme';
 
-const SectionHeader = ({title, buttonTitle = 'Button'}) => {
+const SectionHeader = ({
+  title,
+  // buttonTitle = 'Button'
+}) => {
   return (
     <View
       style={{
@@ -14,7 +17,7 @@ const SectionHeader = ({title, buttonTitle = 'Button'}) => {
         marginBottom: 10,
       }}>
       <Text style={{fontSize: 18, fontWeight: 'bold'}}>{title}</Text>
-      <Button title={buttonTitle} />
+      {/*<Button title={buttonTitle} />*/}
     </View>
   );
 };

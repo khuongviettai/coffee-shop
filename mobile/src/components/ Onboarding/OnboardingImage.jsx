@@ -3,7 +3,7 @@ import {Dimensions, FlatList, Image, Text, View} from 'react-native';
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
-const Onboarding = React.forwardRef(({list, updateCurrentState}, ref) => {
+const OnboardingImage = React.forwardRef(({list, updateCurrentState}, ref) => {
   return (
     <FlatList
       data={list}
@@ -47,4 +47,4 @@ const Onboarding = React.forwardRef(({list, updateCurrentState}, ref) => {
   );
 });
 
-export default Onboarding;
+export default OnboardingImage;

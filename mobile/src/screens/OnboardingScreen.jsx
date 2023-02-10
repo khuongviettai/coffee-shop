@@ -1,7 +1,7 @@
 import React, {useRef, useState} from 'react';
 import {Dimensions, View} from 'react-native';
 import {ONBOARDING} from '../data/onboarding';
-import Onboarding from '../components/ Onboarding/Onboarding';
+import Onboarding from '../components/ Onboarding/OnboardingImage';
 import OnboardingFooter from '../components/ Onboarding/OnboardingFooter';
 import {colors} from '../constants/theme';
 

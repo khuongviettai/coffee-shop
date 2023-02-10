@@ -1,13 +1,13 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {Text, View} from 'react-native';
-import Icon from '../utils/Icon';
-import {colors} from '../constants/theme';
-import PromoScreen from '../screens/PromoScreen';
 import HomeNavigator from './HomeNavigator';
 import ProductNavigator from './ProductNavigator';
 import SearchScreen from '../screens/SearchScreen';
-import AccountScreen from '../screens/AccountScreen';
+import PromotionScreen from '../screens/PromotionScreen';
+import OtherScreen from '../screens/OtherScreen';
+import {Text, View} from 'react-native';
+import Icon from '../utils/Icon';
+import {colors} from '../constants/theme';
 
 const tabs = [
   {
@@ -16,7 +16,7 @@ const tabs = [
     screen: HomeNavigator,
   },
   {
-    title: 'Coffee',
+    title: 'Sản phẩm',
     name: 'Coffee',
     screen: ProductNavigator,
   },
@@ -28,17 +28,18 @@ const tabs = [
   {
     title: 'Ưu đãi',
     name: 'Gift',
-    screen: PromoScreen,
+    screen: PromotionScreen,
     tabBarBadge: 4,
   },
   {
-    title: 'Cá nhân',
-    name: 'Profile',
-    screen: AccountScreen,
+    title: 'Khác',
+    name: 'Menu',
+    screen: OtherScreen,
   },
 ];
+
 const Tab = createBottomTabNavigator();
-const TabNavigator = () => {
+const BottomTabNavigator = () => {
   return (
     <>
       <Tab.Navigator
@@ -57,7 +58,8 @@ const TabNavigator = () => {
                 tabBarBadge: tabBarBadge,
                 tabBarIcon: ({focused}) => {
                   return (
-                    <View>
+                    <View
+                      style={{alignItems: 'center', justifyContent: 'center'}}>
                       <Icon
                         icon={name}
                         size={40}
@@ -86,4 +88,4 @@ const TabNavigator = () => {
   );
 };
 
-export default TabNavigator;
+export default BottomTabNavigator;

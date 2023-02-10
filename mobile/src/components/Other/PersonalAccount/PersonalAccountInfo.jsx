@@ -7,15 +7,15 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import user from '../../../assets/Personal/user.png';
-import {colors, spacing} from '../../constants/theme';
+import user from '../../../../assets/Personal/user.png';
+import {colors, spacing} from '../../../constants/theme';
 import DatePicker from 'react-native-date-picker';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import Feather from 'react-native-vector-icons/Feather';
 
 const windowHeight = Dimensions.get('window').height;
 const windowWidth = Dimensions.get('window').width;
-const PersonalInfo = () => {
+const PersonalAccountInfo = () => {
   const [date, setDate] = useState(new Date());
   const [open, setOpen] = useState(false);
   return (
@@ -25,7 +25,6 @@ const PersonalInfo = () => {
           width: windowWidth,
           height: windowHeight,
           marginTop: spacing.l,
-          // justifyContent: 'center',
           alignItems: 'center',
         }}>
         <View
@@ -41,7 +40,6 @@ const PersonalInfo = () => {
             resizeMode="contain"
           />
           <TouchableOpacity
-            // activeOpacity={1}
             style={{
               width: 40,
               height: 40,
@@ -137,4 +135,4 @@ const PersonalInfo = () => {
   );
 };
 
-export default PersonalInfo;
+export default PersonalAccountInfo;

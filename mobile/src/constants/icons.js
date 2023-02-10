@@ -27,6 +27,7 @@ import Cart2 from '../../assets/icon/shopping-cart.png';
 import Voucher from '../../assets/icon/Voucher.png';
 import Voucher2 from '../../assets/icon/Voucher2.png';
 import Close from '../../assets/icon/Close.png';
+import Menu from '../../assets/icon/Menu.png';
 
 export default {
   Home,
@@ -58,4 +59,5 @@ export default {
   Voucher,
   Voucher2,
   Close,
+  Menu,
 };

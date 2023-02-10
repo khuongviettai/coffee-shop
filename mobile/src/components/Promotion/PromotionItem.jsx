@@ -1,10 +1,11 @@
 import React from 'react';
 import {Image, Text, TouchableOpacity, View} from 'react-native';
 import {colors, sizes, spacing} from '../../constants/theme';
-
+import {useNavigation} from '@react-navigation/native';
 const CardWidth = sizes.width / 2 - (spacing.l + spacing.l / 3 - 20);
 const CardHeight = 220;
-const PromoItem = ({list}) => {
+const PromotionItem = ({list}) => {
+  const navigation = useNavigation();
   return (
     <View
       style={{
@@ -31,9 +32,10 @@ const PromoItem = ({list}) => {
               }}>
               <TouchableOpacity
                 style={{
-                  // width: CardWidth,
-                  // height: CardHeight,
                   overflow: 'hidden',
+                }}
+                onPress={() => {
+                  navigation.navigate('PromotionDetail', {promotion: item});
                 }}>
                 <Image
                   style={{
@@ -86,4 +88,4 @@ const PromoItem = ({list}) => {
   );
 };
 
-export default PromoItem;
+export default PromotionItem;

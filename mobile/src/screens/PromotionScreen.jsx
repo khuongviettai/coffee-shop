@@ -1,10 +1,10 @@
 import React from 'react';
 import {View} from 'react-native';
-import PromoItem from '../components/Promo/PromoItem';
+import PromoItem from '../components/Promotion/PromotionItem';
 import {UUDAI} from '../data/uudai';
 import MainHeader from '../components/Header/MainHeader';
 
-const PromoScreen = () => {
+const PromotionScreen = () => {
   return (
     <View>
       <MainHeader title="Ưu đãi" />
@@ -13,4 +13,4 @@ const PromoScreen = () => {
   );
 };
 
-export default PromoScreen;
+export default PromotionScreen;

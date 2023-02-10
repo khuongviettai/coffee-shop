@@ -9,7 +9,6 @@ import HeaderLogin from '../components/Account/HeaderLogin';
 import Login from '../components/Account/Login';
 import Register from '../components/Account/Register';
 import {useNavigation} from '@react-navigation/native';
-import MainHeader from '../components/Header/MainHeader';
 
 const LOGIN = 'LOGIN';
 const REGISTER = 'REGISTER';
