@@ -14,14 +14,14 @@ const BannerProduct = ({ list }) => {
                 <img className="banner__menu-img" src={Banner} alt="" />
               </Link>
             </div>
-            {list.map((item, index) => {
+            {list.slice(0, 6).map((item, index) => {
               return (
                 <div key={index}>
                   <div className="banner__item">
-                    <Link href="">
+                    <Link to={`/products/${item._id}`}>
                       <img
                         className="banner__item-img"
-                        src={item.image}
+                        src={item.image[0]}
                         alt=""
                       />
                     </Link>
