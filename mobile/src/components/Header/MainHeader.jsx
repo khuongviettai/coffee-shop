@@ -19,13 +19,32 @@ const MainHeader = ({title}) => {
       }}>
       <Text style={{fontSize: sizes.h3, fontWeight: 'bold'}}>{title}</Text>
       <View style={{flexDirection: 'row'}}>
-        <Icon icon="Notification" />
-        <TouchableOpacity onPress={() => navigation.navigate('Cart')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Notification')}>
           <Icon
             style={{width: 30, height: 30, marginLeft: 15}}
-            icon="Cart"
-            // onPress={() => navigation.navigate('Cart')}
+            icon="Notification"
           />
+          <View
+            style={{
+              position: 'absolute',
+              right: -5,
+              top: -5,
+              width: 20,
+              height: 20,
+              borderRadius: 25,
+              borderColor: colors.mainColor,
+              backgroundColor: colors.mainColor,
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}>
+            <Text
+              style={{color: colors.white, fontSize: 14, fontWeight: '500'}}>
+              1
+            </Text>
+          </View>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('Cart')}>
+          <Icon style={{width: 30, height: 30, marginLeft: 15}} icon="Cart" />
           <View
             style={{
               position: 'absolute',

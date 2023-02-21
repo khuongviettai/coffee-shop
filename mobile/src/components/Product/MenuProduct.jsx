@@ -14,50 +14,51 @@ const MenuProduct = ({list}) => {
         justifyContent: 'flex-start',
         marginBottom: 50,
       }}>
-      {list.map((item, index) => {
-        return (
-          <TouchableOpacity
-            key={index}
-            style={
-              index === item.length - 1
-                ? {marginLeft: 0}
-                : {marginLeft: spacing.l, marginBottom: -25}
-            }>
-            <View
-              style={{
-                marginVertical: spacing.xl,
-                borderWidth: 0.1,
-                borderColor: colors.mainColor,
-                height: 10,
-              }}>
-              <Image
+      {list &&
+        list.map((item, index) => {
+          return (
+            <TouchableOpacity
+              key={index}
+              style={
+                index === item.length - 1
+                  ? {marginLeft: 0}
+                  : {marginLeft: spacing.l, marginBottom: -25}
+              }>
+              <View
                 style={{
-                  width: windowWidth,
-                  height: windowHeight,
-                  resizeMode: 'cover',
-                  borderRadius: (windowWidth + windowHeight) / 2,
-                }}
-                source={item.image}
-              />
-            </View>
-            <View
-              style={{
-                alignItems: 'center',
-                width: 65,
-                marginTop: 20,
-              }}>
-              <Text
-                style={{
-                  textAlign: 'center',
-                  fontSize: 13,
-                  fontWeight: '300',
+                  marginVertical: spacing.xl,
+                  borderWidth: 0.1,
+                  borderColor: colors.mainColor,
+                  height: 10,
                 }}>
-                {item.title}
-              </Text>
-            </View>
-          </TouchableOpacity>
-        );
-      })}
+                <Image
+                  style={{
+                    width: windowWidth,
+                    height: windowHeight,
+                    resizeMode: 'cover',
+                    borderRadius: (windowWidth + windowHeight) / 2,
+                  }}
+                  source={item.image}
+                />
+              </View>
+              <View
+                style={{
+                  alignItems: 'center',
+                  width: 65,
+                  marginTop: 20,
+                }}>
+                <Text
+                  style={{
+                    textAlign: 'center',
+                    fontSize: 13,
+                    fontWeight: '300',
+                  }}>
+                  {item.title}
+                </Text>
+              </View>
+            </TouchableOpacity>
+          );
+        })}
     </View>
   );
 };

@@ -30,7 +30,7 @@ const Provision = () => {
             }}>
             Giới thiệu
           </Text>
-          <Text style={{fontSize: 14, fontWeight: '500'}}>
+          <Text style={{fontSize: 14, fontWeight: '500', lineHeight: 23}}>
             Khi khách hàng truy cập vào ứng dụng The Coffee House, website
             vtcoffee.com hoặc đặt hàng qua hotline 0945034118 của V&T Coffee có
             nghĩa là khách hàng đã đồng ý với các điều khoản này. The Coffee
@@ -54,7 +54,7 @@ const Provision = () => {
             }}>
             Chính sách sử dụng dịch vụ
           </Text>
-          <Text style={{fontSize: 14, fontWeight: '500'}}>
+          <Text style={{fontSize: 14, fontWeight: '500', lineHeight: 23}}>
             Khách hàng được quyền chủ động chọn loại dịch vụ để sử dụng khi bắt
             đầu đặt đơn hàng
             {'\n\n'}
@@ -74,7 +74,7 @@ const Provision = () => {
             }}>
             Chấp nhận đơn hàng và giá cả
           </Text>
-          <Text style={{fontSize: 14, fontWeight: '500'}}>
+          <Text style={{fontSize: 14, fontWeight: '500', lineHeight: 23}}>
             The Coffee House có quyền từ chối hoặc hủy đơn hàng của khách hàng
             vì bất kỳ lý do gì liên quan đến lỗi kỹ thuật, hệ thống một cách
             khách quan sau khi đã liên hệ thông báo với khách hàng. Trường hợp
@@ -98,7 +98,7 @@ const Provision = () => {
             }}>
             Thay đổi thông tin đặt hàng
           </Text>
-          <Text style={{fontSize: 14, fontWeight: '500'}}>
+          <Text style={{fontSize: 14, fontWeight: '500', lineHeight: 23}}>
             Khách hàng vui lòng cung cấp thông tin đầy đủ và chính xác ngay khi
             hoàn tất đặt hàng trên tại The Coffee House.
             {'\n\n'}
@@ -120,7 +120,7 @@ const Provision = () => {
             }}>
             Hủy bỏ Đặt hàng
           </Text>
-          <Text style={{fontSize: 14, fontWeight: '500'}}>
+          <Text style={{fontSize: 14, fontWeight: '500', lineHeight: 23}}>
             Khách hàng được quyền chủ động hủy đơn hàng trên ứng dụng đối với
             trường hợp đơn hàng chưa có tài xế nhận giao hàng
             {'\n\n'}
@@ -162,7 +162,7 @@ const Provision = () => {
             }}>
             Phương thức thanh toán
           </Text>
-          <Text style={{fontSize: 14, fontWeight: '500'}}>
+          <Text style={{fontSize: 14, fontWeight: '500', lineHeight: 23}}>
             Thanh toán tiền mặt (COD): thanh toán khi giao hàng.
             {'\n\n'}
             Thanh toán trực tuyến bằng thẻ nội địa (ATM)
@@ -179,7 +179,7 @@ const Provision = () => {
             }}>
             Chính sách Tài khoản Người dùng
           </Text>
-          <Text style={{fontSize: 14, fontWeight: '500'}}>
+          <Text style={{fontSize: 14, fontWeight: '500', lineHeight: 23}}>
             Khách hàng cam kết và cung cấp thông tin chính xác nhằm mục đích
             nhận được phục vụ tốt nhất từ The Coffee House
             {'\n\n'}
@@ -218,7 +218,7 @@ const Provision = () => {
             }}>
             Chính sách hoàn tiền
           </Text>
-          <Text style={{fontSize: 14, fontWeight: '500'}}>
+          <Text style={{fontSize: 14, fontWeight: '500', lineHeight: 23}}>
             The Coffee House rất tiếc khi đã không thể hoàn thành đơn hàng của
             khách hàng. Khách hàng có thể yên tâm về số tiền đã thanh toán. The
             Coffee House cùng với các đối tác Ví điện tử/Ngân hàng sẽ nhanh
@@ -234,7 +234,7 @@ const Provision = () => {
             }}>
             Phí vận chuyển
           </Text>
-          <Text style={{fontSize: 14, fontWeight: '500'}}>
+          <Text style={{fontSize: 14, fontWeight: '500', lineHeight: 23}}>
             Đơn hàng có tổng thanh toán sau khi chiết khấu khuyến mãi trên
             50.000đ được miễn phí vận chuyển.
             {'\n\n'}
@@ -263,7 +263,7 @@ const Provision = () => {
             }}>
             Thời gian giao hàng
           </Text>
-          <Text style={{fontSize: 14, fontWeight: '500'}}>
+          <Text style={{fontSize: 14, fontWeight: '500', lineHeight: 23}}>
             Khung giờ giao hàng: 7h00 - 20h30
             {'\n\n'}
             Khung giờ khách hàng nhận hàng: 7:30 - 21h00
@@ -296,7 +296,7 @@ const Provision = () => {
             }}>
             Chính sách hoàn trả hàng
           </Text>
-          <Text style={{fontSize: 14, fontWeight: '500'}}>
+          <Text style={{fontSize: 14, fontWeight: '500', lineHeight: 23}}>
             Ngay tại thời điểm tài xế bàn giao sản phẩm cho khách hàng, khách
             hàng vui lòng tiến hành đồng kiểm tra sản phẩm với tài xế.
             {'\n\n'}
@@ -320,7 +320,7 @@ const Provision = () => {
             }}>
             Khoảng cách giao hàng
           </Text>
-          <Text style={{fontSize: 14, fontWeight: '500'}}>
+          <Text style={{fontSize: 14, fontWeight: '500', lineHeight: 23}}>
             Để đảm bảo chất lượng sản phẩm, The Coffee House chỉ hỗ trợ giao
             hàng trong phạm vi 5km từ địa chỉ cửa hàng gần nhất đến địa điểm
             khách hàng yêu cầu (khoảng cách tính theo đường bộ).

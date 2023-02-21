@@ -1,27 +1,36 @@
 import React from 'react';
 import {FlatList, Image, TouchableOpacity, View, Text} from 'react-native';
 import {colors, sizes, spacing} from '../../constants/theme';
+import {useNavigation} from '@react-navigation/native';
 
 const Card_Width = sizes.width - 80;
 const Card_Height = 200;
 const Card_Width_Spacing = Card_Width + spacing.l;
 const MenuSlider = ({list}) => {
+  const navigation = useNavigation();
   return (
     <FlatList
-      data={list}
+      data={list.slice(0, 3)}
       horizontal
       snapToInterval={Card_Width_Spacing}
       decelerationRate="fast"
       showsHorizontalScrollIndicator={false}
-      keyExtractor={i => i.id}
+      // keyExtractor={i => {
+      //   return i.id;
+      // }}
       renderItem={({item, index}) => {
         return (
           <TouchableOpacity
+            key={index}
             style={{
               marginLeft: spacing.l,
               marginRight: index === list.length - 1 ? spacing.l : 0,
+            }}
+            onPress={() => {
+              navigation.navigate('ProductDetails', {product: item});
             }}>
             <View
+              key={index}
               style={{
                 width: Card_Width,
                 height: Card_Height,
@@ -42,7 +51,8 @@ const MenuSlider = ({list}) => {
                   overflow: 'hidden',
                 }}>
                 <Image
-                  source={item.image}
+                  // key={index}
+                  source={{uri: item.image[0]}}
                   style={{
                     width: Card_Width,
                     height: Card_Height,

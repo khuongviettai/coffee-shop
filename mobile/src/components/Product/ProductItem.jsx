@@ -82,7 +82,7 @@ const ProductItem = ({list, handleSnapPress}) => {
                       bottom: 20,
                     }}
                     onPress={() => {
-                      handleSnapPress(0);
+                      handleSnapPress(0, item);
                     }}>
                     <AddItem />
                   </TouchableOpacity>

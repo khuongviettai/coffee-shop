@@ -68,7 +68,7 @@ const PopularList = ({list}) => {
                         fontWeight: 'bold',
                         color: colors.white,
                       }}>
-                      Best Seller
+                      NEW
                     </Text>
                   </View>
                 </View>

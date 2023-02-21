@@ -1,15 +1,35 @@
-import React from 'react';
-import BottomSheet, {BottomSheetView} from '@gorhom/bottom-sheet';
+import React, {useEffect, useState} from 'react';
+import BottomSheet, {
+  BottomSheetView,
+  BottomSheetScrollView,
+} from '@gorhom/bottom-sheet';
 import {Text, TouchableOpacity, View} from 'react-native';
-import {colors} from '../../constants/theme';
+import {colors, spacing} from '../../constants/theme';
 import Icon from '../../utils/Icon';
+import instance from '../../instance/instance';
+import CheckBox from '@react-native-community/checkbox';
+import ProductDetailButton from '../ProductDetail/ProductDetailButton';
 
 const ProductOption = ({
   snapPoints,
   bottomSheetRef,
   handleClosePress,
-  route,
+  productID,
 }) => {
+  const [product, setProduct] = useState([]);
+  useEffect(() => {
+    if (productID) {
+      instance
+        .get(`/api/products/${productID}`)
+        .then(({data}) => {
+          setProduct(data);
+        })
+        .catch(error => console.log(error));
+    } else {
+      return setProduct([]);
+    }
+  }, [productID]);
+
   return (
     <BottomSheet
       index={-1}
@@ -29,7 +49,7 @@ const ProductOption = ({
             paddingHorizontal: 30,
           }}>
           <View style={{width: 30, height: 30}}></View>
-          <Text>hello</Text>
+          <Text>{product.title}</Text>
           <TouchableOpacity onPress={handleClosePress}>
             <Icon
               icon="Close"
@@ -40,13 +60,100 @@ const ProductOption = ({
             />
           </TouchableOpacity>
         </View>
+      </BottomSheetView>
+
+      <BottomSheetScrollView>
         <View
           style={{
-            marginTop: 20,
             backgroundColor: colors.white,
-            height: '100%',
-          }}></View>
-      </BottomSheetView>
+            marginTop: spacing.m,
+            marginBottom: 120,
+          }}>
+          <View>
+            {product.size === 0 ? (
+              <View style={{marginLeft: spacing.l, marginTop: spacing.m}}>
+                <Text
+                  style={{
+                    fontSize: 18,
+                    fontWeight: 'bold',
+                  }}>
+                  Size
+                </Text>
+                <Text style={{fontSize: 14, marginTop: 2, color: colors.gray}}>
+                  Chọn 1 loại size
+                </Text>
+              </View>
+            ) : null}
+            {product.size &&
+              product.size.map((item, index) => {
+                return (
+                  <View
+                    key={index}
+                    style={{
+                      marginLeft: spacing.l,
+                      marginVertical: spacing.l,
+                    }}>
+                    <Text>{item}</Text>
+                  </View>
+                );
+              })}
+          </View>
+          <View
+            style={{
+              height: spacing.l,
+              width: '100%',
+              backgroundColor: colors.bodyColor,
+            }}></View>
+          <View>
+            {product.topping === 0 ? (
+              <View style={{marginLeft: spacing.l, marginTop: spacing.m}}>
+                <Text
+                  style={{
+                    fontSize: 18,
+                    fontWeight: 'bold',
+                  }}>
+                  Topping
+                </Text>
+                <Text
+                  style={{
+                    fontSize: 14,
+                    marginTop: 3,
+                    color: colors.gray,
+                    marginBottom: spacing.m,
+                  }}>
+                  Chọn topping
+                </Text>
+              </View>
+            ) : null}
+            {product.topping &&
+              product.topping.map((item, index) => {
+                return (
+                  <View
+                    key={index}
+                    style={{
+                      marginLeft: spacing.l,
+                      marginVertical: spacing.s,
+                    }}>
+                    <View key={index} style={{flexDirection: 'row'}}>
+                      <CheckBox
+                        style={{transform: [{scaleX: 0.8}, {scaleY: 0.8}]}}
+                        boxType="square"
+                        onTintColor="#FA4A0C"
+                        onCheckColor="#fff"
+                        onFillColor="#FA4A0C"
+                        onAnimationType="bounce"
+                        offAnimationType="bounce"
+                        animationDuration={0.2}
+                      />
+                      <Text style={{marginLeft: spacing.s}}>{item}</Text>
+                    </View>
+                  </View>
+                );
+              })}
+          </View>
+        </View>
+      </BottomSheetScrollView>
+      <ProductDetailButton />
     </BottomSheet>
   );
 };

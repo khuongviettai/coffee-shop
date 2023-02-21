@@ -19,7 +19,7 @@ const ProductDetailScreen = ({route}) => {
         scrollEventThrottle={16}>
         <Animated.View
           style={{
-            height: 520,
+            height: 510,
             width: '100%',
             transform: [
               {

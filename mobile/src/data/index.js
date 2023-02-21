@@ -53,8 +53,8 @@ export const POPULAR = [
     price: 20000,
     description:
       'Vị thanh ngọt của đào, vị chua dịu của Cam Vàng nguyên vỏ, vị chát của trà đen tươi được ủ mới mỗi 4 tiếng, cùng hương thơm nồng đặc trưng của sả chính là điểm sáng làm nên sức hấp dẫn của thức uống này.',
-    topping: ['Thạch', 'Sữa tươi', 'Chân trâu đen', 'Chân châu trắng'],
-    size: ['S', 'M', 'L'],
+    topping: ['Thạch', 'Chân trâu đen'],
+    size: ['S'],
   },
   {
     id: 5,
@@ -63,8 +63,8 @@ export const POPULAR = [
     price: 50000,
     description:
       'Vị thanh ngọt của đào, vị chua dịu của Cam Vàng nguyên vỏ, vị chát của trà đen tươi được ủ mới mỗi 4 tiếng, cùng hương thơm nồng đặc trưng của sả chính là điểm sáng làm nên sức hấp dẫn của thức uống này.',
-    Topping: ['Thạch', 'Sữa tươi', 'Chân trâu đen', 'Chân châu trắng'],
-    size: ['S', 'M', 'L'],
+    Topping: ['Chân trâu đen'],
+    size: ['S'],
   },
   {
     id: 6,
@@ -73,28 +73,8 @@ export const POPULAR = [
     price: 90000,
     description:
       'Vị thanh ngọt của đào, vị chua dịu của Cam Vàng nguyên vỏ, vị chát của trà đen tươi được ủ mới mỗi 4 tiếng, cùng hương thơm nồng đặc trưng của sả chính là điểm sáng làm nên sức hấp dẫn của thức uống này.',
-    topping: ['Thạch', 'Sữa tươi', 'Chân trâu đen', 'Chân châu trắng'],
-    size: ['S', 'M', 'L'],
-  },
-  {
-    id: 19,
-    image: [require('../../assets/image/caramelmacchiatonong.png')],
-    title: 'Caramel mật ong',
-    price: 90000,
-    description:
-      'Vị thanh ngọt của đào, vị chua dịu của Cam Vàng nguyên vỏ, vị chát của trà đen tươi được ủ mới mỗi 4 tiếng, cùng hương thơm nồng đặc trưng của sả chính là điểm sáng làm nên sức hấp dẫn của thức uống này.',
-    topping: ['Thạch', 'Sữa tươi', 'Chân trâu đen', 'Chân châu trắng'],
-    size: ['S', 'M', 'L'],
-  },
-  {
-    id: 20,
-    image: [require('../../assets/image/caramelmacchiatonong.png')],
-    title: 'Caramel mật ong',
-    price: 90000,
-    description:
-      'Vị thanh ngọt của đào, vị chua dịu của Cam Vàng nguyên vỏ, vị chát của trà đen tươi được ủ mới mỗi 4 tiếng, cùng hương thơm nồng đặc trưng của sả chính là điểm sáng làm nên sức hấp dẫn của thức uống này.',
-    topping: ['Thạch', 'Sữa tươi', 'Chân trâu đen', 'Chân châu trắng'],
-    size: ['s', 'M', 'L'],
+    topping: ['Chân trâu đen', 'Chân châu trắng'],
+    size: ['L'],
   },
 ];
 
@@ -104,6 +84,8 @@ export const SINGLEPRODUCT = [
     image: require('../../assets/image/bacsiunong.png'),
     title: 'Bạt sỉu nóng',
     price: 50000,
+    quality: 3,
+    size: 'L',
     description:
       'Vị thanh ngọt của đào, vị chua dịu của Cam Vàng nguyên vỏ, vị chát của trà đen tươi được ủ mới mỗi 4 tiếng, cùng hương thơm nồng đặc trưng của sả chính là điểm sáng làm nên sức hấp dẫn của thức uống này.',
   },

@@ -4,15 +4,12 @@ import {colors} from '../constants/theme';
 import SearchInput from '../components/Search/SearchInput';
 import MainHeader from '../components/Header/MainHeader';
 import ShowSearch from '../components/Search/ShowSearch';
+import SearchMasonryList from '../components/Search/SearchMasonryList';
 
 const tabs = [
   {
     title: 'Coffee',
-    content: () => (
-      <View>
-        <Text>Coffee</Text>
-      </View>
-    ),
+    content: () => <SearchMasonryList />,
   },
   {
     title: 'Trà',

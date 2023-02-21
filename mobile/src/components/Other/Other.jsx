@@ -7,6 +7,7 @@ import {useNavigation} from '@react-navigation/native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Feather from 'react-native-vector-icons/Feather';
 import Octicons from 'react-native-vector-icons/Octicons';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 const windowWidth = Dimensions.get('window').width;
 const Other = () => {
@@ -21,6 +22,7 @@ const Other = () => {
           marginHorizontal: spacing.l,
           flexDirection: 'row',
           justifyContent: 'space-between',
+          flexWrap: 'wrap',
         }}>
         <TouchableOpacity
           style={{
@@ -31,7 +33,8 @@ const Other = () => {
             borderRadius: 10,
             paddingLeft: spacing.m,
             paddingTop: spacing.m,
-          }}>
+          }}
+          onPress={() => navigation.navigate('PurchaseHistory')}>
           <Octicons name="history" style={{fontSize: 20}} />
           <Text
             style={{fontSize: 15, fontWeight: 'bold', marginTop: spacing.s}}>
@@ -42,7 +45,22 @@ const Other = () => {
           style={{
             width: '48%',
             height: 80,
-
+            backgroundColor: colors.white,
+            borderRadius: 10,
+            paddingLeft: spacing.m,
+            paddingTop: spacing.m,
+          }}>
+          <MaterialCommunityIcons name="list-status" style={{fontSize: 20}} />
+          <Text
+            style={{fontSize: 15, fontWeight: 'bold', marginTop: spacing.s}}>
+            Đơn hàng
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={{
+            width: '48%',
+            height: 80,
+            marginVertical: spacing.s,
             backgroundColor: colors.white,
             borderRadius: 10,
             paddingLeft: spacing.m,
@@ -55,19 +73,51 @@ const Other = () => {
             Điều khoản
           </Text>
         </TouchableOpacity>
+        <TouchableOpacity
+          style={{
+            width: '48%',
+            height: 80,
+            marginVertical: spacing.s,
+            backgroundColor: colors.white,
+            borderRadius: 10,
+            paddingLeft: spacing.m,
+            paddingTop: spacing.m,
+          }}
+          onPress={() => navigation.navigate('Policy')}>
+          <MaterialIcons name="policy" style={{fontSize: 20}} />
+          <Text
+            style={{fontSize: 15, fontWeight: 'bold', marginTop: spacing.s}}>
+            Chính sách
+          </Text>
+        </TouchableOpacity>
       </View>
       <View>
-        <ProfileHeader title="Đơn mua" />
+        <ProfileHeader title="Hỗ trợ" />
         <View
           style={{
             width: windowWidth - (spacing.l + spacing.l),
-            height: 65,
+            height: 50,
             backgroundColor: colors.white,
             marginHorizontal: spacing.l,
             borderRadius: 10,
-            flexDirection: 'row',
-            justifyContent: 'space-between',
-          }}></View>
+            justifyContent: 'center',
+          }}>
+          <TouchableOpacity
+            style={{
+              flexDirection: 'row',
+              height: 45,
+              alignItems: 'center',
+              marginLeft: spacing.m,
+            }}
+            onPress={() => navigation.navigate('ContactAndSupport')}>
+            <Feather name="message-square" style={{fontSize: 20}} />
+            <Text style={{marginLeft: 12}}>Liên hệ và hỗ trợ</Text>
+            <Icon
+              icon="Next"
+              style={{width: 20, height: 20, position: 'absolute', right: 30}}
+            />
+          </TouchableOpacity>
+        </View>
       </View>
 
       <ProfileHeader title="Tài khoản" />

@@ -1,6 +1,6 @@
 import React from 'react';
 import {Image, Text, TouchableOpacity, View} from 'react-native';
-import {colors, sizes, spacing} from '../../constants/theme';
+import {sizes, spacing} from '../../constants/theme';
 import Icon from '../../utils/Icon';
 
 const CartItem = ({list}) => {
@@ -10,76 +10,63 @@ const CartItem = ({list}) => {
         return (
           <View
             style={{
-              height: 120,
-              // elevation: 15,
+              minHeight: 120,
               backgroundColor: 'white',
               marginVertical: spacing.s,
               marginHorizontal: spacing.l,
               paddingHorizontal: 10,
               flexDirection: 'row',
-              alignItems: 'center',
               borderRadius: sizes.radius,
             }}
             key={index}>
             <Image
               source={item.image[0]}
-              style={{width: 100, height: 100, borderRadius: sizes.radius}}
+              style={{
+                width: 100,
+                height: 100,
+                borderRadius: sizes.radius,
+                marginTop: spacing.s,
+              }}
             />
             <View
               style={{
                 flex: 1,
                 marginLeft: spacing.m,
-                paddingVertical: 20,
+                marginTop: spacing.s,
                 height: 100,
               }}>
-              <Text>{item.title}</Text>
-              <Text style={{marginVertical: 8, color: '#8b8989'}}>
+              <Text>
+                {item.title} X{5}
+              </Text>
+              <Text style={{marginVertical: 2, color: '#8b8989'}}>
                 {item.price.toLocaleString('vi', {
                   style: 'currency',
                   currency: 'VND',
                 })}
               </Text>
+              <View>
+                <Text style={{marginVertical: 2, color: '#8b8989'}}>
+                  Size: {item.size}
+                </Text>
+                {item.topping &&
+                  item.topping.map((topping, i) => (
+                    <View key={i}>
+                      <Text style={{color: '#8b8989'}}>{topping}</Text>
+                    </View>
+                  ))}
+              </View>
             </View>
             <View>
               <TouchableOpacity>
                 <Icon
                   icon="Trash"
                   style={{
-                    marginLeft: 45,
-                    marginBottom: 38,
+                    marginTop: spacing.s,
                     width: 25,
                     height: 25,
                   }}
                 />
               </TouchableOpacity>
-
-              <View style={{flexDirection: 'row', alignItems: 'center'}}>
-                <TouchableOpacity>
-                  <Icon
-                    icon="Minus"
-                    style={{
-                      width: 22,
-                      height: 22,
-                      backgroundColor: colors.mainColor,
-                      borderRadius: 20,
-                    }}
-                  />
-                </TouchableOpacity>
-                <Text style={{fontSize: 20, marginLeft: 8, marginRight: 8}}>
-                  5
-                </Text>
-                <TouchableOpacity>
-                  <Icon
-                    icon="Plus"
-                    style={{
-                      width: 22,
-                      height: 22,
-                      backgroundColor: colors.mainColor,
-                      borderRadius: 20,
-                    }}
-                  />
-                </TouchableOpacity>
-              </View>
             </View>
           </View>
         );

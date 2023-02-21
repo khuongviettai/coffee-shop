@@ -10,7 +10,7 @@ const ProductDetailInfo = ({route}) => {
       style={{
         backgroundColor: colors.white,
         marginTop: spacing.m,
-        marginBottom: 100,
+        marginBottom: 120,
       }}>
       <View>
         {product.size.length > 0 ? (
@@ -67,30 +67,31 @@ const ProductDetailInfo = ({route}) => {
             </Text>
           </View>
         ) : null}
-        {product.topping.map((item, index) => {
-          return (
-            <View
-              key={index}
-              style={{
-                marginLeft: spacing.l,
-                marginVertical: spacing.s,
-              }}>
-              <View key={index} style={{flexDirection: 'row'}}>
-                <CheckBox
-                  style={{transform: [{scaleX: 0.8}, {scaleY: 0.8}]}}
-                  boxType="square"
-                  onTintColor="#FA4A0C"
-                  onCheckColor="#fff"
-                  onFillColor="#FA4A0C"
-                  onAnimationType="bounce"
-                  offAnimationType="bounce"
-                  animationDuration={0.2}
-                />
-                <Text style={{marginLeft: spacing.s}}>{item}</Text>
+        {product.topping &&
+          product.topping.map((item, index) => {
+            return (
+              <View
+                key={index}
+                style={{
+                  marginLeft: spacing.l,
+                  marginVertical: spacing.s,
+                }}>
+                <View key={index} style={{flexDirection: 'row'}}>
+                  <CheckBox
+                    style={{transform: [{scaleX: 0.8}, {scaleY: 0.8}]}}
+                    boxType="square"
+                    onTintColor="#FA4A0C"
+                    onCheckColor="#fff"
+                    onFillColor="#FA4A0C"
+                    onAnimationType="bounce"
+                    offAnimationType="bounce"
+                    animationDuration={0.2}
+                  />
+                  <Text style={{marginLeft: spacing.s}}>{item}</Text>
+                </View>
               </View>
-            </View>
-          );
-        })}
+            );
+          })}
       </View>
     </View>
   );

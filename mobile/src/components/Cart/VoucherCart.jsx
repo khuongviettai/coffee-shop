@@ -1,7 +1,7 @@
 import React from 'react';
 import {Text, TouchableOpacity, View} from 'react-native';
 import Icon from '../../utils/Icon';
-import {sizes, spacing} from '../../constants/theme';
+import {colors, sizes, spacing} from '../../constants/theme';
 
 const VoucherCart = () => {
   return (
@@ -21,7 +21,7 @@ const VoucherCart = () => {
       <Icon icon="Voucher" style={{marginLeft: spacing.l + spacing.s}} />
       <TouchableOpacity
         style={{
-          backgroundColor: 'aqua',
+          backgroundColor: colors.mainColor,
           borderRadius: 20,
           width: 78,
           height: 35,
@@ -29,7 +29,9 @@ const VoucherCart = () => {
           justifyContent: 'center',
           marginRight: spacing.l,
         }}>
-        <Text style={{fontSize: 16, fontWeight: '500'}}>Voucher</Text>
+        <Text style={{fontSize: 15, fontWeight: 'bold', color: '#fff'}}>
+          Voucher
+        </Text>
       </TouchableOpacity>
     </View>
   );

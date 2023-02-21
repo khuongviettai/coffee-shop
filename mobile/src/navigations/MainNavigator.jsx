@@ -13,6 +13,10 @@ import CartScreen from '../screens/CartScreen';
 import PersonalAccountInfo from '../components/Other/PersonalAccount/PersonalAccountInfo';
 import Provision from '../components/Other/Utilities/Provision';
 import PromotionDetail from '../components/Promotion/PromotionDetail';
+import ContactAndSupport from '../components/Other/Support/ContactAndSupport';
+import NotificationScreen from '../screens/NotificationScreen';
+import Policy from '../components/Other/Utilities/Policy';
+import PurchaseHistory from '../components/Order/PurchaseHistory';
 
 const Stack = createStackNavigator();
 const MainNavigator = () => {
@@ -63,7 +67,14 @@ const MainNavigator = () => {
         <Stack.Screen
           name="ForgotPassword"
           component={ForgotPassword}
-          options={{headerShown: false}}
+          options={{
+            headerShown: true,
+            title: 'Lấy lại mật khẩu',
+            headerBackTitle: false,
+            headerTitle: false,
+            headerBackTitleVisible: false,
+            headerTintColor: '#333',
+          }}
         />
 
         <Stack.Screen
@@ -71,7 +82,7 @@ const MainNavigator = () => {
           component={AddressSave}
           options={{
             headerShown: true,
-            title: null,
+            title: 'Địa chỉ',
             headerBackTitle: false,
             headerTitle: false,
             headerBackTitleVisible: false,
@@ -126,8 +137,55 @@ const MainNavigator = () => {
         <Stack.Screen
           name="PromotionDetail"
           component={PromotionDetail}
+          options={({route}) => ({
+            title: route.params.title,
+            headerBackTitle: false,
+            headerTitle: true,
+            headerBackTitleVisible: false,
+            headerTintColor: '#333',
+          })}
+        />
+        <Stack.Screen
+          name="ContactAndSupport"
+          component={ContactAndSupport}
           options={{
-            title: false,
+            title: 'Liên hệ và hỗ trợ',
+            headerBackTitle: false,
+            headerTitle: false,
+            headerBackTitleVisible: false,
+            headerTintColor: '#333',
+          }}
+        />
+
+        <Stack.Screen
+          name="Notification"
+          component={NotificationScreen}
+          options={{
+            title: 'Thông báo',
+            headerBackTitle: false,
+            headerTitle: false,
+            headerBackTitleVisible: false,
+            headerTintColor: '#333',
+          }}
+        />
+
+        <Stack.Screen
+          name="Policy"
+          component={Policy}
+          options={{
+            title: 'Chính sách',
+            headerBackTitle: false,
+            headerTitle: false,
+            headerBackTitleVisible: false,
+            headerTintColor: '#333',
+          }}
+        />
+
+        <Stack.Screen
+          name="PurchaseHistory"
+          component={PurchaseHistory}
+          options={{
+            title: 'Lịch sử mua hàng',
             headerBackTitle: false,
             headerTitle: false,
             headerBackTitleVisible: false,
