@@ -14,6 +14,9 @@ const SingleProduct = () => {
   const [product, setProduct] = useState({});
   const [loading, setLoading] = useState(true);
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  useEffect(() => {
     axiosLink
       .get(`/api/products/${id}`)
       .then(({ data }) => {
