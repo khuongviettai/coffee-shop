@@ -7,35 +7,46 @@ git clone https://github.com/khuongviettai/coffee-shop.git
 
 ```
 cd client 
-<br/>
-npm i
 
 ```
-
-**  **
-<br/>
+install module
+```
+npm i
+```
+run 
+```
 npm start
+```
 
 
 # using server
 
-cd client 
+```
+cd server 
 
+```
+install module
+```
 npm i
-
+```
+run 
+```
 npm start
+```
 
 # using Mobile
 ## ios
-cd mobile 
-npm i
-cd ios 
-bundle install
-bundle exec pod install
-cd ..
-npx react-native run-ios
+
+``` cd mobile ```
+ ``` npm i ```
+``` cd ios ```
+``` bundle install ```
+``` bundle exec pod install ```
+ ```cd ..  ```
+``` npx react-native run-ios ```
 
 ## android
-cd mobile 
-npm i
-npx react-native run-android
+
+``` cd mobile ```
+``` npm i ```
+``` npx react-native run-android ``` 
