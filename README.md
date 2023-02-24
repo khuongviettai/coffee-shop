@@ -5,15 +5,18 @@ git clone https://github.com/khuongviettai/coffee-shop.git
 
 ## using client
 
-cd client 
-npm i
+** cd client ** 
 
+
+** npm i **
+<br/>
 npm start
 
 
 # using server
 
 cd client 
+
 npm i
 
 npm start
