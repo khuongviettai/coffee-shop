@@ -1,0 +1,50 @@
+.ProductsComponent {
+  margin-top: 120px;
+  .productsComponent__wrap {
+    padding: 40px 0 50px;
+  }
+}
+
+.productsComponent__sidebar-left {
+  width: 19.5%;
+  .sidebar__menu-items {
+    background: #fff;
+    padding-left: 15px;
+    padding-right: 15px;
+    list-style: none;
+    .sidebar__menu-list {
+      padding: 0;
+      line-height: 24px;
+      display: list-item;
+      .sidebar__menu-list--link {
+        font-family: "SF Pro Text", sans-serif;
+        padding-left: 26px;
+        display: inline-block;
+        padding-bottom: 8px;
+        &:active {
+          font-size: 16px;
+          color: #ea8025;
+          font-weight: 600;
+          position: relative;
+        }
+      }
+    }
+  }
+}
+
+.productsComponent__item-right {
+  width: 80.5%;
+  .menu__lists-item {
+    padding-left: 70px;
+  }
+}
+
+.productsComponent__item-right::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  top: 0;
+  background: #00000026;
+}
