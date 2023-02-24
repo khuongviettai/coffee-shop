@@ -1,6 +1,6 @@
 
 
-#using Coffee
+# using Coffee
 git clone https://github.com/khuongviettai/coffee-shop.git
 
 ## using client
@@ -11,14 +11,14 @@ npm i
 npm start
 
 
-#using server
+# using server
 
 cd client 
 npm i
 
 npm start
 
-#using Mobile
+# using Mobile
 ## ios
 cd mobile 
 npm i
@@ -28,7 +28,7 @@ bundle exec pod install
 cd ..
 npx react-native run-ios
 
-##android
+## android
 cd mobile 
 npm i
 npx react-native run-android
