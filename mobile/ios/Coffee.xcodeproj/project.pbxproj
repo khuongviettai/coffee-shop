@@ -11,11 +11,11 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		1CE0156F8E8B08399145FB7D /* Pods_Coffee_CoffeeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02087C54C538955BDACB2CCA /* Pods_Coffee_CoffeeTests.framework */; };
-		3CAE40819D3C9C39A9F0CC3D /* Pods_Coffee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E8BAA965887B2E0E2EC47C8 /* Pods_Coffee.framework */; };
+		74FDC4C1C3A9B32F8494246C /* Pods_Coffee_CoffeeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E874E185850E6E74E3E2103D /* Pods_Coffee_CoffeeTests.framework */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		AD4852D829A8B52C00B0368B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD4852D729A8B52C00B0368B /* GoogleService-Info.plist */; };
+		9D26CD20638272A10CF140F8 /* Pods_Coffee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C977A8DE4CCFD8A4F9A550 /* Pods_Coffee.framework */; };
 		AD7286952994A6F50011A6CB /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = AD7286942994A6F50011A6CB /* Fonts */; };
+		AD9922BF29A9B26100D3D8F4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD9922BE29A9B26100D3D8F4 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,10 +29,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00C977A8DE4CCFD8A4F9A550 /* Pods_Coffee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coffee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356EE1AD99517003FC87E /* CoffeeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* CoffeeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoffeeTests.m; sourceTree = "<group>"; };
-		02087C54C538955BDACB2CCA /* Pods_Coffee_CoffeeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coffee_CoffeeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07F961A680F5B00A75B9A /* Coffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Coffee/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = Coffee/AppDelegate.mm; sourceTree = "<group>"; };
@@ -42,11 +42,11 @@
 		3B4392A12AC88292D35C810B /* Pods-Coffee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coffee.debug.xcconfig"; path = "Target Support Files/Pods-Coffee/Pods-Coffee.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-Coffee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coffee.release.xcconfig"; path = "Target Support Files/Pods-Coffee/Pods-Coffee.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-Coffee-CoffeeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coffee-CoffeeTests.debug.xcconfig"; path = "Target Support Files/Pods-Coffee-CoffeeTests/Pods-Coffee-CoffeeTests.debug.xcconfig"; sourceTree = "<group>"; };
-		6E8BAA965887B2E0E2EC47C8 /* Pods_Coffee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coffee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Coffee/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-Coffee-CoffeeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coffee-CoffeeTests.release.xcconfig"; path = "Target Support Files/Pods-Coffee-CoffeeTests/Pods-Coffee-CoffeeTests.release.xcconfig"; sourceTree = "<group>"; };
-		AD4852D729A8B52C00B0368B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AD7286942994A6F50011A6CB /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
+		AD9922BE29A9B26100D3D8F4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E874E185850E6E74E3E2103D /* Pods_Coffee_CoffeeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coffee_CoffeeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -55,7 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1CE0156F8E8B08399145FB7D /* Pods_Coffee_CoffeeTests.framework in Frameworks */,
+				74FDC4C1C3A9B32F8494246C /* Pods_Coffee_CoffeeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,7 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CAE40819D3C9C39A9F0CC3D /* Pods_Coffee.framework in Frameworks */,
+				9D26CD20638272A10CF140F8 /* Pods_Coffee.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +90,7 @@
 		13B07FAE1A68108700A75B9A /* Coffee */ = {
 			isa = PBXGroup;
 			children = (
-				AD4852D729A8B52C00B0368B /* GoogleService-Info.plist */,
+				AD9922BE29A9B26100D3D8F4 /* GoogleService-Info.plist */,
 				AD7286942994A6F50011A6CB /* Fonts */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
@@ -106,8 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				6E8BAA965887B2E0E2EC47C8 /* Pods_Coffee.framework */,
-				02087C54C538955BDACB2CCA /* Pods_Coffee_CoffeeTests.framework */,
+				00C977A8DE4CCFD8A4F9A550 /* Pods_Coffee.framework */,
+				E874E185850E6E74E3E2103D /* Pods_Coffee_CoffeeTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -190,7 +190,7 @@
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */,
 				E235C05ADACE081382539298 /* [CP] Copy Pods Resources */,
-				551107D9A62636D2217A9CA7 /* [CP-User] [RNFB] Core Configuration */,
+				7ED6D9E40A5B40EAC261CD2A /* [CP-User] [RNFB] Core Configuration */,
 			);
 			buildRules = (
 			);
@@ -250,7 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD7286952994A6F50011A6CB /* Fonts in Resources */,
-				AD4852D829A8B52C00B0368B /* GoogleService-Info.plist in Resources */,
+				AD9922BF29A9B26100D3D8F4 /* GoogleService-Info.plist in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
@@ -292,7 +292,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Coffee/Pods-Coffee-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		551107D9A62636D2217A9CA7 /* [CP-User] [RNFB] Core Configuration */ = {
+		7ED6D9E40A5B40EAC261CD2A /* [CP-User] [RNFB] Core Configuration */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
