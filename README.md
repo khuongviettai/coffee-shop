@@ -68,6 +68,12 @@ npx react-native run-ios
 
 ## android
 
-``` cd mobile ```
-``` npm i ```
-``` npx react-native run-android ``` 
+``` 
+cd mobile
+```
+``` 
+npm i
+```
+``` 
+npx react-native run-android
+``` 
