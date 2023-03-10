@@ -4,6 +4,7 @@ const dotenv = require("dotenv");
 const cors = require("cors");
 const productRoutes = require("./routes/productRoutes");
 const userRouters = require("./routes/userRoutes");
+const notificationFirebase = require('./routes/notificationFirebase')
 const app = express();
 
 dotenv.config();
@@ -28,3 +29,5 @@ app.use("/api/products", productRoutes);
 
 // create user
 app.use("/api/user", userRouters);
+
+app.use("/api/notifications", notificationFirebase);

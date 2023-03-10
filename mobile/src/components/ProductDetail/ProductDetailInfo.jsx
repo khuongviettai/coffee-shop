@@ -2,6 +2,7 @@ import React from 'react';
 import {Text, View} from 'react-native';
 import {colors, spacing} from '../../constants/theme';
 import CheckBox from '@react-native-community/checkbox';
+import RadioButton from '../../utils/RadioButton';
 
 const ProductDetailInfo = ({route}) => {
   const {product} = route.params;
@@ -27,18 +28,19 @@ const ProductDetailInfo = ({route}) => {
             </Text>
           </View>
         ) : null}
-        {product.size.map((item, index) => {
-          return (
-            <View
-              key={index}
-              style={{
-                marginLeft: spacing.l,
-                marginVertical: spacing.l,
-              }}>
-              <Text>{item}</Text>
-            </View>
-          );
-        })}
+        <RadioButton options={product.size} />
+        {/*{product.size.map((item, index) => {*/}
+        {/*  return (*/}
+        {/*    <View*/}
+        {/*      key={index}*/}
+        {/*      style={{*/}
+        {/*        marginLeft: spacing.l,*/}
+        {/*        marginVertical: spacing.l,*/}
+        {/*      }}>*/}
+        {/*      <Text>{item}</Text>*/}
+        {/*    </View>*/}
+        {/*  );*/}
+        {/*})}*/}
       </View>
       <View
         style={{
